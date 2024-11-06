@@ -49,31 +49,36 @@ export default {
       { id: 5, img: require('@/assets/images/clubs/6.png'), title: 'نادي الصوتيات', description: 'هذا النادي يقدم الدعم للطالب الذين لديهم مشکلات تتعلق بالنطق . حيث يقوم معلم متخصص بتدريب الطالب على كيفية النطق الصحيح، لكي يتمكن الطالب من خلال العديد من الأنشطة التفاعلية من ضبط النطق لديه تحسين مهارة النطق الصحيح الكلمات والجمل' },
       { id: 6, img: require('@/assets/images/clubs/1.png'), title: 'اللايف كوتش – Life Coach', description: 'الاهتمام في هذا النادي خاص ببرامج تنمية المهارات بشكل متطور وعن طريق أفضل المحاضرين و يساعد المتدرب أكثر علي فهم مراحل الحياة وطبيعة الشخصية في كل مراحلة بشكل فردي وجماعي في مجموعات مقسمة لفئات عمرية تشمل جميع الاعمار' },
       { id: 7, img: require('@/assets/images/clubs/4.png'), title: 'نادي المحادثة', description: 'هو مساحة حرة للطلاب لممارسة ما يتعلمونه أثناء الحصص عن طريق الحوار، حيث يتقابل الطلاب يومياً مع زملائهم، ويتحدثون بحرية لمدة يحددونها هم بأنفسهم. ويقوم معلمو الفصول بتزويدهم بمهام خاصة بعد كل حصة، لينجزوها في نادي المحادثة.' }
-    ])
+    ]);
+
+    let autoplayInterval = null;
 
     const updateItemsToShow = () => {
-      itemsToShow.value = window.innerWidth < 768 ? 1 : 3
-      console.log('Items to show:', itemsToShow.value)
-    }
+      itemsToShow.value = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+    };
 
     const goToSlide = (index) => {
-      console.log('Attempting to go to slide:', index)
-      currentSlide.value = index
-    }
+      currentSlide.value = index;
+    };
+
+    const autoplay = () => {
+      currentSlide.value = (currentSlide.value + 1) % clubs.value.length;
+    };
 
     watch(currentSlide, (newValue) => {
-      console.log('Current slide changed to:', newValue)
-    })
+      console.log('Current slide changed to:', newValue);
+    });
 
     onMounted(() => {
-      updateItemsToShow()
-      window.addEventListener('resize', updateItemsToShow)
-      console.log('Component mounted')
-    })
+      updateItemsToShow();
+      window.addEventListener('resize', updateItemsToShow);
+      autoplayInterval = setInterval(autoplay, 3000);
+    });
 
     onBeforeUnmount(() => {
-      window.removeEventListener('resize', updateItemsToShow)
-    })
+      window.removeEventListener('resize', updateItemsToShow);
+      clearInterval(autoplayInterval);
+    });
 
     return {
       carousel,
@@ -81,9 +86,9 @@ export default {
       itemsToShow,
       clubs,
       goToSlide,
-    }
+    };
   },
-}
+};
 </script>
 
 <style scoped>
@@ -100,12 +105,12 @@ export default {
   padding: 1rem;
   background: #fff;
   border-radius: 1em;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 30px 10px; 
   font-family: 'DIN Next LT Arabic', sans-serif;
   font-weight: 500;
   width: 100%;
-  height: 100%;
+  height: 95%;
 }
 .kids-card:hover {
   background: linear-gradient(111.84deg, #2C80AC 0%, #165E84 100%);
@@ -143,7 +148,7 @@ export default {
 .pagination {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 .pagination button {
   margin: 0 0.5rem;

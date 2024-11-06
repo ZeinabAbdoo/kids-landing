@@ -1,6 +1,4 @@
 <template>
-  <PopUp />
-
   <!--Section One Content-->
   <div class="kids-sec1">
     <div class="text-container">
@@ -132,21 +130,118 @@
   </div>
 
   <!--Section Three Content-->
-  <div class="kids-sec3">
-    <img
-      src="@/assets/images/kids/sec3-corner.jpg"
-      alt="Corner Image"
-      class="corner-img"
-    />
-    <h1>فلسفة منهج المعايشة</h1>
-    <div class="kids-iframe-container">
-      <iframe
-        src="https://player.vimeo.com/video/822494136"
-        frameborder="0"
-        allow="autoplay; fullscreen"
-        allowfullscreen
-      >
-      </iframe>
+  <div class="content-slider-container">
+    <!-- Text Content Section -->
+    <div class="text-content">
+      <h1>طفلك يستحق التميّز! 🌟</h1>
+      <p>
+        تعرّف على مستوى طلابنا المميزين في أكاديمية مونجلش، فالوصول لهذه
+        المهارات ليس بالصعب مع برامجنا المتطورة. دعنا نساعد طفلك ليصبح من
+        المتفوقين ويكتسب الثقة واللغة بسهولة وسلاسة!
+      </p>
+      <button @click="sendMessage" id="kids-wa3-ar">
+        إشترك معنا الأن
+        <i class="fab fa-whatsapp"></i>
+      </button>
+    </div>
+
+    <!-- Slider Section -->
+    <div class="video-slider-component">
+      <div class="slider-container">
+        <button class="slider-nav left" @click="prevSlide">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 19.5 8.25 12l7.5-7.5"
+            />
+          </svg>
+        </button>
+        <div class="image-container">
+          <img
+            :src="currentImage.src"
+            :alt="currentImage.alt"
+            @click="openPopup(currentImage.videoSrc)"
+            class="image-thumbnail"
+          />
+          <svg
+            height="80px"
+            width="80px"
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 491.444 491.444"
+            xml:space="preserve"
+            fill="#000000"
+            class="video-icon"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                style="fill: #ff9d52"
+                d="M0.11,245.721c-1.434,61.225,11.068,122.791,39.645,145.883c80.101,64.726,331.832,64.726,411.932,0c28.577-23.093,41.079-84.659,39.646-145.883H0.11z"
+              ></path>
+              <path
+                style="fill: #f47d21"
+                d="M451.687,105.91c-72.82-72.82-339.111-72.82-411.932,0C15.231,130.434,1.463,187.925,0.11,245.721h491.223C489.98,187.925,476.213,130.434,451.687,105.91z"
+              ></path>
+              <path
+                style="fill: #ffffff"
+                d="M320.941,232.105L190.51,136.284c-11.159-8.199-26.9-0.231-26.9,13.617v95.82h164.225C327.834,240.6,325.537,235.481,320.941,232.105z"
+              ></path>
+              <path
+                style="fill: #ffffff"
+                d="M190.51,355.161l130.432-95.823c4.595-3.375,6.893-8.496,6.893-13.617H163.609v95.824C163.609,355.391,179.351,363.359,190.51,355.161z"
+              ></path>
+            </g>
+          </svg>
+        </div>
+
+        <button class="slider-nav right" @click="nextSlide">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m8.25 4.5 7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Popup Overlay -->
+    <div v-if="isPopupOpen" class="popup-overlay" @click="closePopup">
+      <div class="popup-content" @click.stop>
+        <button class="close-button" @click="closePopup">&times;</button>
+        <iframe
+          v-if="currentVideoSrc"
+          :src="currentVideoSrc"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          class="popup-video"
+        ></iframe>
+      </div>
     </div>
   </div>
 
@@ -182,7 +277,17 @@
       alt="vector"
       class="vector-img"
     />
-    <h1>تعرف علي أندية <br />مونجلش التفاعلية</h1>
+    <div class="kids-sec8-row" style="direction: rtl">
+      <h4>تعرف علي أندية <br />مونجلش التفاعلية</h4>
+      <p>
+        استكشف أندية مونجلش التفاعلية التي توفر لطفلك فرصة فريدة للتعلم بطريقة
+        ممتعة ومبتكرة! تقدم هذه الأندية مجموعة متنوعة من الأنشطة المصممة لتعزيز
+        مهارات اللغة والتواصل، مما يجعل عملية التعلم تجربة مليئة بالمرح
+        والتفاعل. في أندية مونجلش، نؤمن بأهمية دمج التعلم باللعب، حيث سيستمتع
+        طفلك بتجربة تعليمية غنية تساعده على تطوير ثقته بنفسه وقدراته اللغوية
+        بشكل فعّال ومشوق!
+      </p>
+    </div>
     <ImmerseClubs />
   </div>
 
@@ -212,11 +317,22 @@
             :key="index"
             class="swiper-slide"
           >
-            <p>
-              <span class="review-stars">{{ "★".repeat(review.stars) }}</span>
-            </p>
-            <p>{{ review.review }}</p>
+            <div class="quote-icon">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 40 37"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.18 17.808H2.8C2.96 8.46795 4.8 6.92796 10.54 3.52796C11.2 3.12796 11.42 2.28796 11.02 1.60796C10.9279 1.45051 10.8053 1.31298 10.6595 1.2034C10.5137 1.09381 10.3475 1.01436 10.1706 0.96968C9.99376 0.925 9.80977 0.915984 9.62939 0.943158C9.44901 0.970333 9.27585 1.03315 9.12 1.12796C2.36 5.12796 0 7.56796 0 19.188V29.968C0 33.388 2.78 36.148 6.18 36.148H12.18C15.7 36.148 18.36 33.488 18.36 29.968V23.968C18.36 20.468 15.7 17.808 12.18 17.808ZM33.818 17.808H24.438C24.598 8.46795 26.438 6.92796 32.178 3.52796C32.838 3.12796 33.058 2.28796 32.658 1.60796C32.5638 1.45003 32.4393 1.31227 32.2916 1.20261C32.144 1.09295 31.9762 1.01353 31.7978 0.968927C31.6193 0.924324 31.4339 0.915412 31.252 0.942703C31.0701 0.969995 30.8955 1.03295 30.738 1.12796C23.978 5.12796 21.618 7.56796 21.618 19.208V29.988C21.618 33.408 24.398 36.168 27.798 36.168H33.798C37.318 36.168 39.978 33.508 39.978 29.988V23.988C39.998 20.468 37.338 17.808 33.818 17.808Z"
+                  fill="#0C1B2A"
+                />
+              </svg>
+            </div>
             <p class="review-by">{{ review.by }}</p>
+            <p>{{ review.review }}</p>
           </div>
         </div>
       </div>
@@ -245,7 +361,11 @@
   <div class="kids-sec9">
     <div class="kids-sec9-content">
       <div class="kids-sec9-text">
-        <h2>حيث يلتقي التميز التعليمي بالإبتكار والتقدم اللغوي</h2>
+        <h2>
+          نعدكم بالجودة والإتقان
+          <br />
+          لأن فريقنا الأقوى أكاديميًّا
+        </h2>
         <p>
           باختيارك أكاديمية مونجلش، تستفيد من منهجية تعليمية مبتكرة، دورات
           متنوعة تلائم كل الفئات العمرية، وإرشاد متخصص يضمن تحقيقك لأعلى مستويات
@@ -481,7 +601,6 @@ import KidsLevels from "../../components/ar/KidsLevels.vue";
 import PackagesKids from "../../components/ar/PackagesKids.vue";
 import PackagesFoundation from "../../components/ar/PackagesFoundation.vue";
 import FormSection from "../../components/ar/FormSection.vue";
-import PopUp from "../../components/ar/PopUp2.vue";
 
 import Swiper from "swiper";
 import "swiper/css";
@@ -497,11 +616,25 @@ export default {
     PackagesKids,
     PackagesFoundation,
     FormSection,
-    PopUp,
   },
   data() {
     return {
       activeDescription: null,
+      isPopupOpen: false,
+      currentVideoSrc: "",
+      currentSlide: 0,
+      images: [
+        {
+          videoSrc: "https://www.youtube.com/embed/jdWsjo_IpWE?autoplay=1",
+          src: require("@/assets/images/video/7.png"),
+          alt: "Video 2 Thumbnail",
+        },
+        {
+          videoSrc: "https://www.youtube.com/embed/jtEK65Jkb2c?autoplay=1",
+          src: require("@/assets/images/video/6.png"),
+          alt: "Video 1 Thumbnail",
+        },
+      ],
       totalSections: 3,
       currentIndex: 0,
       reviews: [
@@ -533,26 +666,21 @@ export default {
       swiper: null,
     };
   },
+  computed: {
+    currentImage() {
+      return this.images[this.currentSlide];
+    },
+  },
   mounted() {
     this.scrollToPackagesWithDelay();
 
     this.$nextTick(() => {
-      const swiperContainer = this.$refs.swiperContainer;
-      if (swiperContainer) {
-        this.swiper = new Swiper(swiperContainer, {
-          loop: true,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
-        this.startAutoNavigate();
-      }
+      this.initSwiper();
+      window.addEventListener("resize", this.handleResize);
     });
+  },
+  beforeUnmount() {
+    window.removeEventListener("resize", this.handleResize);
   },
   methods: {
     async sendMessage() {
@@ -569,6 +697,48 @@ export default {
       } catch (error) {
         console.error("Error fetching phone number:", error);
       }
+    },
+    initSwiper() {
+      const swiperContainer = this.$refs.swiperContainer;
+      if (swiperContainer) {
+        if (this.swiper) {
+          this.swiper.destroy(true, true);
+        }
+
+        this.swiper = new Swiper(swiperContainer, {
+          loop: true,
+          slidesPerView: window.innerWidth <= 768 ? 1 : 3,
+          spaceBetween: 10,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+        this.startAutoNavigate();
+      }
+    },
+
+    handleResize() {
+      this.initSwiper();
+    },
+    openPopup(videoSrc) {
+      this.currentVideoSrc = videoSrc;
+      this.isPopupOpen = true;
+    },
+    closePopup() {
+      this.isPopupOpen = false;
+      this.currentVideoSrc = "";
+    },
+    nextSlide() {
+      this.currentSlide = (this.currentSlide + 1) % this.images.length;
+    },
+    prevSlide() {
+      this.currentSlide =
+        (this.currentSlide - 1 + this.images.length) % this.images.length;
     },
     startAutoNavigate() {
       setInterval(() => {
@@ -594,6 +764,11 @@ export default {
   watch: {
     "$route.hash"() {
       this.scrollToPackagesWithDelay();
+    },
+    reviews(newReviews) {
+      if (newReviews.length > 0) {
+        this.initSwiper();
+      }
     },
   },
 };
@@ -906,83 +1081,240 @@ export default {
 }
 
 /* Section 3 style */
-.kids-sec3 {
-  background-image: url("@/assets/images/kids/sec3-bg.jpg");
+.content-slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  direction: rtl;
+  background-image: url("@/assets/images/vid.png");
   background-size: cover;
   background-position: center;
-  text-align: center;
+}
+
+.text-content {
+  flex: 1;
+  padding-right: 5%;
+}
+
+.text-content h1 {
   color: #165e84;
+  font-size: 48px;
+  font-weight: 500;
+  font-family: "DIN Next LT Arabic";
+  margin-bottom: 3%;
+}
+
+.text-content h2 {
+  color: #3d3d3d;
+  font-size: 40px;
+  font-weight: 500;
+  font-family: "DIN Next LT Arabic";
+  line-height: 52px;
+}
+
+.text-content h2 span {
+  color: #165e84;
+  line-height: 52px;
+}
+
+.text-content p {
+  color: #4b4b4b;
+  font-size: 20px;
+  width: 90%;
+  margin-bottom: 2%;
+  font-weight: 500;
+  font-family: "DIN Next LT Arabic";
+}
+
+.text-content button {
+  padding: 12px;
+  background: linear-gradient(45deg, #fe9b4f, #f47e23);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  width: 40%;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.video-slider-component {
+  flex: 1;
+}
+
+.slider-container {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0;
-  width: 100%;
-  position: relative;
   align-items: center;
-  overflow: hidden;
-  font-family: "DIN Next LT Arabic", sans-serif;
-  padding: 2em 1em;
+  justify-content: center;
 }
-.kids-sec3 h1 {
-  font-size: 2.8em;
-  font-family: "DIN Next LT Arabic-n";
-  font-weight: 700;
-  margin: 1em;
-}
-.corner-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 15%;
-  height: auto;
-}
-.kids-iframe-container {
+
+.image-container {
   position: relative;
-  width: 80%;
-  height: 0;
-  padding-bottom: 45%;
-  margin-bottom: 1em;
-  border-radius: 2em;
+  display: inline-block;
 }
-.kids-iframe-container iframe {
+
+.image-thumbnail {
+  width: 400px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.video-icon {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+.image-container:hover .video-icon {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.video-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+.image-container:hover .video-icon {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.slider-nav {
+  color: #165e84;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  background-color: transparent;
+  transition: color 0.3s ease;
+  border: none;
+}
+.slider-nav svg {
+  width: 50px;
+  height: 50px;
+}
+
+.slider-nav.left {
+  left: 5vw;
+}
+
+.slider-nav.right {
+  right: 5vw;
+}
+
+.slider-nav:hover {
+  color: #2178a6;
+}
+
+.slider-nav:active {
+  color: #fff;
+}
+
+.popup-overlay {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
-@media (max-width: 1200px) {
-  .kids-sec3 h1 {
-    font-size: 2.2em;
+
+.popup-content {
+  width: 26vw;
+  height: 95vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.popup-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes popupIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
   }
-  .kids-iframe-container {
-    width: 90%;
-    padding-bottom: 50%;
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
-@media (max-width: 768px) {
-  .kids-sec3 h1 {
-    font-size: 1.8em;
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 4rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: #fff;
+}
+
+.close-button:hover {
+  color: #d9534f;
+}
+@media (max-width: 850px) {
+  .content-slider-container {
+    display: block;
   }
-  .corner-img {
-    width: 20%;
+
+  h1 {
+    font-size: 30px;
   }
-  .kids-iframe-container {
+
+  .slider-nav.left {
+    left: 0;
+  }
+
+  .slider-nav.right {
+    right: 0;
+  }
+
+  .popup-content {
     width: 95%;
-    padding-bottom: 56.25%;
+    height: auto;
   }
-}
-@media (max-width: 480px) {
-  .kids-sec3 h1 {
-    font-size: 1.5em;
-  }
-  .corner-img {
-    width: 25%;
-  }
-  .kids-iframe-container {
+
+  .popup-video {
+    height: calc(100vw * (16 / 9));
     width: 100%;
-    padding-bottom: 60%;
+  }
+
+  .carousel-track {
+    justify-content: center;
+  }
+
+  .item {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  img {
+    width: 80%;
+    height: auto;
+  }
+  .text-content h1,
+  .text-content p,
+  .text-content h2,
+  .text-content button {
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+    width: 100%;
   }
 }
 
@@ -1122,37 +1454,36 @@ export default {
   background-image: url("@/assets/images/kids/sec3-bg.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 0 0 0;
 }
 .kids-sec5 h1 {
   font-size: 2.8rem;
-  font-family: "DIN Next LT Arabic-n";
-  font-weight: 700;
+  font-family: "DIN Next LT Arabic";
+  font-weight: 500;
   color: #165e84;
   padding: 2em;
 }
 .vector-img {
-  margin-top: -10em;
+  margin-top: -7.5em;
 }
 @media (max-width: 1440px) {
   .vector-img {
-    margin-top: -6em;
+    margin-top: -6.5em;
     width: 150px;
   }
 }
 
 @media (max-width: 1280px) and (max-height: 720px) {
   .vector-img {
-    margin-top: 6em;
+    margin-top: -5.5em;
     width: 120px;
   }
 }
 
 @media (max-width: 1280px) and (min-height: 1024px) {
   .vector-img {
-    margin-top: -13em;
+    margin-top: -5.5em;
     width: 120px;
   }
 }
@@ -1177,7 +1508,7 @@ export default {
     padding: 0.5rem;
   }
   .vector-img {
-    margin-top: -2.7em;
+    margin-top: -2.5em;
     width: 50px;
   }
 }
@@ -1221,7 +1552,11 @@ export default {
 /* Section 8 style */
 .kids-sec8 {
   padding: 2%;
-  background-color: white;
+  align-items: center;
+  background-image: url("@/assets/images/kids/sec3-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
   height: auto;
 }
 .kids-sec8-row {
@@ -1233,9 +1568,12 @@ export default {
   font-family: "DIN Next LT Arabic";
   font-weight: 500;
   color: #165e84;
+  direction: rtl;
 }
 .kids-sec8-row h4 {
   font-size: 3vw;
+  font-family: "DIN Next LT Arabic";
+  font-weight: 500;
 }
 .kids-sec8-row span {
   font-size: 3.2vw;
@@ -1257,58 +1595,90 @@ export default {
   .kids-sec8-row h4 {
     width: 25%;
     margin: 0;
-    padding-right: 1em;
+    padding-left: 1em;
   }
   .kids-sec8-row p {
     width: 70%;
     margin: 0;
-    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+@media (max-width: 768px) {
+  .kids-sec8-row h4 {
+    font-size: 24px;
+    width: 100%;
+  }
+  .kids-sec8-row h4 span {
+    font-size: 24px;
+    width: 100%;
   }
 }
 .adult-swiper {
   width: 100%;
   max-width: 100%;
-  margin: auto;
-  padding: 2em;
-  background-color: #fff;
+  margin: 0 auto;
   margin-top: 1em;
 }
+
 .swiper-container {
   width: 100%;
-  background-image: url("@/assets/images/bg.png");
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px;
   overflow: hidden;
 }
+
 .swiper-slide {
-  color: #fff;
+  position: relative;
+  padding: 20px;
   text-align: center;
-  font-size: 1.5em;
+  background: linear-gradient(296.63deg, #f47d21 -0.48%, #ff9d52 100.48%);
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 300px;
+  align-items: center;
+  height: 300px;
+  color: #000;
+  font-size: 1.2em;
 }
+.quote-icon {
+  position: absolute;
+  top: 8%;
+  left: 10%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  color: #fff;
+  z-index: 10;
+}
+
 .swiper-slide p {
   font-family: "DIN Next LT Arabic", sans-serif;
   font-weight: 500;
-  padding: 1em;
+  padding: 0 0.5rem;
 }
+
 .review-stars {
-  color: #ff9800;
+  color: #000;
   font-size: 2.5rem;
 }
 .review-by {
   margin-top: 15px;
   font-weight: bold;
   font-size: 1.5rem;
-  color: #fff;
+  color: #000;
   text-decoration: underline;
-  text-decoration-color: #ff9800;
+  text-decoration-color: #ffffff;
   text-decoration-thickness: 2px;
   text-underline-offset: 10px;
   font-family: "DIN Next LT Arabic", sans-serif;
+}
+/* Mobile styles */
+@media (max-width: 768px) {
+  .swiper-slide {
+    height: 200px;
+    font-size: 20px;
+  }
+  .review-by {
+    font-size: 22px;
+  }
 }
 
 /* Section 9 style */
@@ -1322,6 +1692,7 @@ export default {
   font-weight: 500;
   color: #4e5354;
   position: relative;
+  direction: rtl;
 }
 .kids-sec9-content {
   display: flex;
@@ -1340,10 +1711,10 @@ export default {
 }
 .kids-sec9-text h2 {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 1rem;
   color: #165e84;
-  font-family: "DIN Next LT Arabic-n";
+  font-family: "DIN Next LT Arabic";
 }
 .kids-sec9-text .kids-sec9-title {
   font-size: 1.3rem;

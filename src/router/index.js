@@ -3,13 +3,17 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import HomeAr from '../components/ar/KidsPage.vue';
 import HomeEn from '../components/en/KidsPage.vue';
+import CartEn from '../components/en/CartPage.vue';
+import CartAr from '../components/ar/CartPage.vue';
 
 const englishRoutes = [
-  { path: '/en/', name: 'IletsEn', component: HomeEn },
+  { path: '/en/', name: 'HomeEn', component: HomeEn },
+  { path: '/en/cart/', name: 'CartEn', component: CartEn }
 ];
 
 const arabicRoutes = [
-  { path: '/', name: 'IletsAr', component: HomeAr },
+  { path: '/', name: 'HomeAr', component: HomeAr },
+  { path: '/ar/cart/', name: 'CartAr', component: CartAr }
 ];
 
 const routes = [

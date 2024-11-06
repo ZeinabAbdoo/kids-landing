@@ -29,7 +29,15 @@
 
           <div class="card-body">
             <p>"المعايشة بلس" هي باقتك المثالية، تقدم أقصى قيمة مقابل السعر بميزات فريدة وخدمة شاملة تضمن راحتك.</p>
-            <h2>{{ prices[3]?.price }}</h2>
+            <h2>
+              <div class="one-level">
+                ســعر المســـــتوي
+                <br />
+                الواحد
+                {{ pricePerPeriod(3) }}
+              </div>
+              <div class="after-price">{{ prices[3]?.price }}</div>
+            </h2>
             
             <h6>واستمتع بالاتي:</h6>
             <ul>
@@ -57,7 +65,15 @@
           </div>
           <div class="card-body">
             <p>باقة “المعيشة” توفر العديد من الميزات وهي الخيار المعتاد لعملائنا، تضمن الراحة والخدمات المتميزة بكفاءة.</p>
-            <h2>{{ prices[2]?.price }}</h2>
+            <h2>
+              <div class="one-level">
+                ســعر المســـــتوي
+                <br />
+                الواحد
+                {{ pricePerPeriod(2) }}
+              </div>
+              <div class="after-price">{{ prices[2]?.price }}</div>
+            </h2>
             
             <h6>واستمتع بالاتي:</h6>
             <ul>
@@ -80,7 +96,15 @@
           </div>
           <div class="card-body">
             <p>باقة مونجلش الأساسية هي الأقل سعراً، ولكنها تحتوي على بعض ميزات دوراتنا التي توفر تجربة تعليمية مميزة.</p>
-            <h2>{{ prices[1]?.price }}</h2>
+            <h2>
+              <div class="one-level">
+                ســعر المســـــتوي
+                <br />
+                الواحد
+                {{ pricePerPeriod(1) }}
+              </div>
+              <div class="after-price">{{ prices[1]?.price }}</div>
+            </h2>
             
             <h6>واستمتع بالاتي:</h6>
             <ul>
@@ -107,8 +131,14 @@
           <div class="card-body">
             <p>“المعيشة بلس” هي باقتك المثالية، تقدم أقصى قيمة مقابل السعر بميزات فريدة وخدمة شاملة تضمن راحتك.</p>
             <h2>
-              {{ prices[6]?.price }}
-              <span class="sloped-line">{{ prices[6]?.beforePrice }}</span> 
+              <div class="one-level">
+                ســعر المســـــتوي
+                <br />
+                الواحد
+                {{ pricePerPeriod(6) }}
+              </div>
+              <div class="after-price">{{ prices[6]?.price }}</div>
+              <span class="sloped-line">{{ prices[6]?.beforePrice }}</span>
             </h2>
             <h6>واستمتع بالاتي:</h6>
             <ul>
@@ -140,8 +170,14 @@
           <div class="card-body">
             <p>باقة “المعيشة” توفر العديد من الميزات وهي الخيار المعتاد لعملائنا، تضمن الراحة والخدمات المتميزة بكفاءة.</p>
             <h2>
-              {{ prices[5]?.price }}
-              <span class="sloped-line">{{ prices[5]?.beforePrice }}</span> 
+              <div class="one-level">
+                ســعر المســـــتوي
+                <br />
+                الواحد
+                {{ pricePerPeriod(5) }}
+              </div>
+              <div class="after-price">{{ prices[5]?.price }}</div>
+              <span class="sloped-line">{{ prices[5]?.beforePrice }}</span>
             </h2>
             <h6>واستمتع بالاتي:</h6>
             <ul>
@@ -166,7 +202,15 @@
           </div>
           <div class="card-body">
             <p>باقة مونجلش الأساسية هي الأقل سعراً، ولكنها تحتوي على بعض ميزات دوراتنا التي توفر تجربة تعليمية مميزة.</p>
-            <h2>{{ prices[4]?.price }}</h2>
+            <h2>
+              <div class="one-level">
+                ســعر المســـــتوي
+                <br />
+                الواحد
+                {{ pricePerPeriod(4) }}
+              </div>
+              <div class="after-price">{{ prices[4]?.price }}</div>
+            </h2>
           
             <h6>واستمتع بالاتي:</h6>
             <ul>
@@ -194,8 +238,14 @@
           <div class="card-body">
             <p>“المعيشة بلس” هي باقتك المثالية، تقدم أقصى قيمة مقابل السعر بميزات فريدة وخدمة شاملة تضمن راحتك.</p>
             <h2>
-              {{ prices[8]?.price }}
-              <span class="sloped-line">{{ prices[8]?.beforePrice }}</span> 
+              <div class="one-level">
+                ســعر المســـــتوي
+                <br />
+                الواحد
+                {{ pricePerPeriod(8) }}
+              </div>
+              <div class="after-price">{{ prices[8]?.price }}</div>
+              <span class="sloped-line">{{ prices[8]?.beforePrice }}</span>
             </h2>
             <h6>واستمتع بالاتي:</h6>
             <ul>
@@ -227,8 +277,14 @@
           <div class="card-body">
             <p>باقة “المعيشة” توفر العديد من الميزات وهي الخيار المعتاد لعملائنا، تضمن الراحة والخدمات المتميزة بكفاءة.</p>
             <h2>
-              {{ prices[7]?.price }}
-              <span class="sloped-line">{{ prices[7]?.beforePrice }}</span> 
+              <div class="one-level">
+                ســعر المســـــتوي
+                <br />
+                الواحد
+                {{ pricePerPeriod(7) }}
+              </div>
+              <div class="after-price">{{ prices[7]?.price }}</div>
+              <span class="sloped-line">{{ prices[7]?.beforePrice }}</span>
             </h2>
             <h6>واستمتع بالاتي:</h6>
             <ul>
@@ -270,90 +326,122 @@
       selectMenu(menu) {
         this.selectedMenu = menu;
       },
-      fetchPackagePrices() {
-        let url = sessionStorage.getItem('userInfo') ? '/api/user/get-course-packages' : '/api/session/get-course-packages';
-        const userInfo = sessionStorage.getItem('userInfo');
-        let headers = {};
-        if (userInfo) {
-          try {
-            const parsedUserInfo = JSON.parse(userInfo);
-            const token = parsedUserInfo.token;
-            if (token) {
-              headers['Authorization'] = `Bearer ${token}`;
-            }
-          } catch (error) {
-            console.error('Error parsing userInfo from sessionStorage:', error);
+          fetchPackagePrices() {
+      let url = sessionStorage.getItem("userInfo")
+        ? "/api/user/get-course-packages"
+        : "/api/session/get-course-packages";
+      const userInfo = sessionStorage.getItem("userInfo");
+      let headers = {};
+      if (userInfo) {
+        try {
+          const parsedUserInfo = JSON.parse(userInfo);
+          const token = parsedUserInfo.token;
+          if (token) {
+            headers["Authorization"] = `Bearer ${token}`;
           }
+        } catch (error) {
+          console.error("Error parsing userInfo from sessionStorage:", error);
         }
-        axios.get(url, { headers })
-        .then(response => {
+      }
+      axios
+        .get(url, { headers })
+        .then((response) => {
           const data = response.data;
-          console.log('Full API response:', data); 
+          console.log("Full API response:", data);
           this.prices = {};
 
           if (data.success) {
             const packages = data.data;
             packages.forEach((packageData) => {
-              console.log('Package Data:', packageData); 
+              console.log("Package Data:", packageData);
 
               const packageId = packageData.id;
               const packagePrice = packageData.packagePrice;
               const beforePrice = packageData.packageBeforePrice;
-              const currency = packageData.currency_ar;
+              const currency = packageData.currency_en;
+              const packagePeriod = packageData.packagePeriod;
 
-              console.log('beforePrice:', beforePrice); 
+              console.log("beforePrice:", beforePrice);
               this.prices[packageId] = {
                 price: `${packagePrice} ${currency}`,
                 beforePrice: beforePrice ? `${beforePrice} ${currency}` : null,
-                packageId: packageId
+                packagePeriod: packagePeriod,
+                packageId: packageId,
               };
             });
           }
         })
-        .catch(error => console.error('Error fetching package details:', error));
+        .catch((error) =>
+          console.error("Error fetching package details:", error)
+        );
+    },
+    addToCart(packageId) {
+      let url = sessionStorage.getItem("userInfo")
+        ? "/api/user/cart"
+        : "/api/session/cart";
+      const userInfo = sessionStorage.getItem("userInfo");
+      let headers = {};
+      if (userInfo) {
+        try {
+          const parsedUserInfo = JSON.parse(userInfo);
+          const token = parsedUserInfo.token;
 
-      },
-      addToCart(packageId) {
-        let url = sessionStorage.getItem('userInfo') ? '/api/user/cart' : '/api/session/cart';
-        const userInfo = sessionStorage.getItem('userInfo');
-        let headers = {};
-        if (userInfo) {
-          try {
-            const parsedUserInfo = JSON.parse(userInfo);
-            const token = parsedUserInfo.token;
-
-            if (token) {
-              headers['Authorization'] = `Bearer ${token}`;
-              headers['Content-type'] = 'application/json';
-            }
-          } catch (error) {
-            console.error('Error parsing userInfo from sessionStorage:', error);
+          if (token) {
+            headers["Authorization"] = `Bearer ${token}`;
+            headers["Content-type"] = "application/json";
           }
+        } catch (error) {
+          console.error("Error parsing userInfo from sessionStorage:", error);
         }
-        axios.post(url, {
-          course_package_id: packageId,
-          quantity: 1 
-        }, { headers })
-        .then(response => {
-          console.log('Item added to cart successfully:', response.data);
-          this.$router.push({ name: 'CartAr' }).then(() => {
-              window.location.reload();
+      }
+      axios
+        .post(
+          url,
+          {
+            course_package_id: packageId,
+            quantity: 1,
+          },
+          { headers }
+        )
+        .then((response) => {
+          console.log("Item added to cart successfully:", response.data);
+          this.$router.push({ name: "CartAr" }).then(() => {
+            window.location.reload();
           });
         })
-        .catch(error => {
-          console.error('Error adding item to cart:', error.response ? error.response.data : error.message);
+        .catch((error) => {
+          console.error(
+            "Error adding item to cart:",
+            error.response ? error.response.data : error.message
+          );
         });
+    },
+  },
+  mounted() {
+    this.fetchPackagePrices();
+  },
+  computed: {
+  pricePerPeriod() {
+    return (packageId) => {
+      const priceData = this.prices[packageId];
+      if (priceData && priceData.price && priceData.packagePeriod) {
+        const price = parseFloat(priceData.price.split(' ')[0]); // Extract the numeric part of price
+        const period = parseFloat(priceData.packagePeriod);
+        if (period !== 0) {
+          return price / period; // Return price per period
+        }
       }
-    },
-    mounted() {
-      this.fetchPackagePrices();
-    },
-  };
+      return null;
+    };
+  },
+},
+};
 </script>
 
 <style scoped>
 .packages{
       margin-top: -85px;
+      direction: rtl;
 }
 .packages-filter-switch {
     display: flex;
@@ -449,7 +537,7 @@ input:not(:checked) ~ .slider .label-right {
 }
 
 .packages {
-    background-image: url('@/assets/images/bg.png');
+    background-image: url('@/assets/images/bg.jpg');
     background-size: cover;
     background-position: center;
     font-family: 'DIN Next LT Arabic', sans-serif;
@@ -547,6 +635,8 @@ input:not(:checked) ~ .slider .label-right {
     font-size: 27px;
     margin-top: 50px;
     margin-bottom: -25px;
+      font-family: "DIN Next LT Arabic";
+  font-weight: 500;
 }
 .card-header h3 span{
     color: #175f87;
@@ -581,13 +671,6 @@ input:not(:checked) ~ .slider .label-right {
     margin-bottom: 20px;
     margin-top: 20px;
     font-size: 13px;
-}
-.card-body h2 {
-    color: #F47D21 ;
-    font-weight: 600;
-    font-size: 34px;
-    margin-bottom: 25px;
-    margin-top: -15px;
 }
 .card-body h6{
     font-weight: 900;
@@ -632,6 +715,8 @@ input:not(:checked) ~ .slider .label-right {
     cursor: pointer;
     margin-bottom: 10px;
     font-size: larger;
+      font-family: "DIN Next LT Arabic";
+  font-weight: 500;
 }
 
 @media (max-width: 800px) {
@@ -642,23 +727,50 @@ input:not(:checked) ~ .slider .label-right {
         font-size: 2rem;
     }
 }
+.card-body h2 {
+  color: #f47d21;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 25px;
+  margin-top: -15px;
+  background-color: #eaeaea66;
+  padding: 0 0.3em 0.2em 0;
+  border-radius: 10px;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+
+}
+
+.one-level {
+  border: 1px solid #f47d21;
+  border-radius: 20px;
+  font-size: 15px;
+  background-color: #fff;
+  padding: 5px 8px 7px 0px;
+  margin-top: 5px;
+  width: 31%;
+}
+.after-price {
+  margin: 0 1%;
+}
 .sloped-line {
   position: relative;
   display: inline-block;
-  color: #165E84;
-  font-size: 30px;
-  margin-right: 5%;
-  opacity: 0.7; 
+  color: #165e84;
+  font-size: 24px;
+  opacity: 0.7;
 }
+
 .sloped-line::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 80%;
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: #FF4646; 
-  transform: rotate(-15deg); 
+  background-color: #ff4646;
+  transform: rotate(-15deg);
   transform-origin: left center;
 }
 </style>

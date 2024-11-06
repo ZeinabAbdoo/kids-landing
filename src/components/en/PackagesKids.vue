@@ -286,7 +286,7 @@
               const packageId = packageData.id;
               const packagePrice = packageData.packagePrice;
               const beforePrice = packageData.packageBeforePrice;
-              const currency = packageData.currency_ar;
+              const currency = packageData.currency_en;
 
               console.log('beforePrice:', beforePrice); 
               this.prices[packageId] = {
@@ -436,7 +436,7 @@ input:not(:checked) ~ .slider .label-right {
 }
 
 .packages {
-    background-image: url('@/assets/images/bg.png');
+    background-image: url('@/assets/images/bg.jpg');
     background-size: cover;
     background-position: center;
     font-family: 'DIN Next LT Arabic', sans-serif;

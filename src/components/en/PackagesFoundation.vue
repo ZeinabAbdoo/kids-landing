@@ -314,7 +314,7 @@
               const packageId = packageData.id;
               const packagePrice = packageData.packagePrice;
               const beforePrice = packageData.packageBeforePrice;
-              const currency = packageData.currency_ar;
+              const currency = packageData.currency_en;
 
               console.log('beforePrice:', beforePrice); 
               this.prices[packageId] = {
@@ -724,26 +724,133 @@ input:not(:checked) ~ .slider .label-right {
   }
 }
 
-.package-card {
-    background: #fff;
-    border-radius: 30px;
-    padding: 20px;
-    width: 100%;
-    max-width: 320px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative; 
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    margin-top: 50px;
-}
-.card-img {
-    position: absolute;
-    top: -8%; 
-    left: 50%;  
-    transform: translateX(-50%); 
-    width: 150%; 
+.card-body h2 {
+  color: #f47d21;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 25px;
+  margin-top: -15px;
+  background-color: #eaeaea66;
+  padding: 0 0.3em 0.2em 0;
+  border-radius: 10px;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
 }
 
+.one-level {
+  border: 1px solid #f47d21;
+  border-radius: 20px;
+  font-size: 15px;
+  background-color: #fff;
+  padding: 5px 8px 7px 0px;
+  margin-top: 5px;
+  width: 31%;
+}
+.after-price {
+  margin: 0 1%;
+}
+.sloped-line {
+  position: relative;
+  display: inline-block;
+  color: #165e84;
+  font-size: 24px;
+  opacity: 0.7;
+}
+
+.sloped-line::after {
+  content: "";
+  position: absolute;
+  top: 80%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ff4646;
+  transform: rotate(-15deg);
+  transform-origin: left center;
+}
+
+.kids-sec8-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 1em;
+  font-family: "DIN Next LT Arabic";
+  font-weight: 500;
+  color: #165e84;
+}
+.kids-sec8-row h4 {
+  font-size: 40px;
+  font-family: "DIN Next LT Arabic";
+  font-weight: 500;
+}
+.kids-sec8-row p {
+  font-size: 1.3rem;
+  color: gray;
+  max-width: 75%;
+  margin: 0 auto;
+}
+@media (min-width: 769px) {
+  .kids-sec8-row {
+    flex-direction: row;
+    justify-content: center;
+    text-align: right;
+  }
+  .kids-sec8-row h4 {
+    width: 30%;
+    margin: 0;
+    padding-right: 1%;
+  }
+  .kids-sec8-row p {
+    width: 65%;
+    margin: 0;
+    padding-left: 2%;
+  }
+}
+@media (max-width: 768px) {
+  .kids-sec8-row {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .kids-sec8-row h4 {
+    width: 100%;
+    margin: 0;
+    font-size: 1.5em;
+  }
+  .kids-sec8-row p {
+    width: 100%;
+    margin: 0;
+    font-size: 1em;
+  }
+}
+
+.package-card {
+  background: #fff;
+  border-radius: 30px;
+  padding: 20px;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+}
+.card-img {
+  position: absolute;
+  top: -13%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+@media (max-width: 768px) {
+.card-img {
+  width: 85%;
+  margin-top: 13%;
+}
+}
 </style>

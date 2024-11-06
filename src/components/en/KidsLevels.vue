@@ -1,38 +1,14 @@
 <template>
   <div class="adult-levels-container">
-    <div class="top-half">
-      <div class="text-section">
-        <h1>Kid’s<br>Levels</h1>
+    <div class="text-section">
+        <h1>Kid’s Levels</h1>
         <p>
           We do a great adventure with our little friends! Together, we learn the language in a fun way and acquire magical (wonderful) speaking and listening skills, which opens a door full of unlimited ambitions and great opportunities to become the pioneers of the future.
         </p>
-      </div>
-      <div class="info-section" v-if="currentLevel">
-        <div class="info-row">
-          <div class="info-item">
-            <p>{{ currentLevel.duration }}</p>
-            <h3>The duration of the diploma</h3>
-          </div>
-          <div class="info-item">
-            <p>{{ currentLevel.hours }}</p>
-            <h3>Number of Clubs Hours</h3>
-          </div>
-          <div class="info-item">
-            <p>{{ currentLevel.levels }}</p>
-            <h3>The number of levels</h3>
-          </div>
-        </div>
-        <div class="info-row">
-          <div class="info-item">
-            <p>{{ currentLevel.sessions }}</p>
-            <h3>Number of hours of basic lectures</h3>
-          </div>
-          <div class="info-item">
-            <p>{{ currentLevel.book }}</p>
-            <h3>diploma’s textbook</h3>
-          </div>
-        </div>
-      </div>
+        <button @click="sendMessage" id="kids-wa4-en">
+        Join Us Now
+        <i class="fab fa-whatsapp"></i>
+      </button>
     </div>
 
     <div class="slider-section">
@@ -44,10 +20,7 @@
         @slideChange="onSlideChange"
         :transition="0.5"
       >
-        <Slide
-          v-for="(level, index) in levels"
-          :key="index"
-        >
+        <Slide v-for="(level, index) in levels" :key="index">
           <div
             :class="['level-card', { active: activeIndex === index }]"
             @click="setActiveIndex(index)"
@@ -64,8 +37,8 @@
 </template>
 
 <script>
-import { Carousel, Slide } from 'vue3-carousel';
-import 'vue3-carousel/dist/carousel.css';
+import { Carousel, Slide } from "vue3-carousel";
+import "vue3-carousel/dist/carousel.css";
 
 export default {
   components: {
@@ -75,89 +48,16 @@ export default {
   data() {
     return {
       activeIndex: 0,
-      itemsToShow: 6, 
+      itemsToShow: 6,
       levels: [
-        {
-          main: "1",
-          title: "Foundation Stage Diploma",
-          duration: "5 Months",
-          hours: "264 Hours",
-          levels: "4 Levels",
-          sessions: "40 Sessions",
-          book: "Oxford Phonics World",
-        },
-        {
-          main: "2",
-          title: "Basics Stage Diploma",
-          duration: "4 Months",
-          hours: "264 Hours",
-          levels: "4 Levels",
-          sessions: "32 Sessions",
-          book: "Family and Friends 1",
-        },
-        {
-          main: "3",
-          title: "Starters Stage Diploma",
-          duration: "4 Months",
-          hours: "264 Hours",
-          levels: "4 Levels",
-          sessions: "32 Sessions",
-          book: "Family and Friends 2",
-        },
-        {
-          main: "4",
-          title: "Juniors Stage Diploma",
-          duration: "4 Months",
-          hours: "264 Hours",
-          levels: "4 Levels",
-          sessions: "48 Sessions",
-          book: "Family and Friends 3",
-        },
-        {
-          main: "5",
-          title: "Seniors Stage Diploma",
-          duration: "5 Months",
-          hours: "264 Hours",
-          levels: "5 Levels",
-          sessions: "40 Sessions",
-          book: "Family and Friends 4",
-        },
-        {
-          main: "6",
-          title: "Winners Stage Diploma",
-          duration: "6 Months",
-          hours: "264 Hours",
-          levels: "6 Levels",
-          sessions: "32 Sessions",
-          book: "Family and Friends 5",
-        },
-        {
-          main: "7",
-          title: "Leaders Stage Diploma",
-          duration: "6 Months",
-          hours: "264 Hours",
-          levels: "4 Levels",
-          sessions: "32 Sessions",
-          book: "Family and Friends 6",
-        },
-        {
-          main: "8",
-          title: "Masters Stage Diploma",
-          duration: "8 Months",
-          hours: "264 Hours",
-          levels: "8 Levels",
-          sessions: "64 Sessions",
-          book: "Interchange 3",
-        },
-        {
-          main: "9",
-          title: "Advanced Stage Diploma",
-          duration: "4 Months",
-          hours: "264 Hours",
-          levels: "4 Levels",
-          sessions: "32 Sessions",
-          book: "Interchange 3",
-        },
+        { main: "Stage", title: "A1" },
+        { main: "Stage", title: "A1+" },
+        { main: "Stage", title: "A2" },
+        { main: "Stage", title: "A2+" },
+        { main: "Stage", title: "B1" },
+        { main: "Stage", title: "B1+" },
+        { main: "Stage", title: "B2" },
+        { main: "Stage", title: "B2+" },
       ],
     };
   },
@@ -167,9 +67,24 @@ export default {
     },
   },
   methods: {
+    async sendMessage() {
+      try {
+        const response = await fetch(
+          `https://service.monglish.co.uk/api/get-phone-number`
+        );
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        const url = `https://wa.me/${data.phone_number}`;
+        window.open(url, "_blank");
+      } catch (error) {
+        console.error("Error fetching phone number:", error);
+      }
+    },
     setActiveIndex(index) {
-    this.activeIndex = index;
-    this.currentLevel = this.levels[index]; 
+      this.activeIndex = index;
+      this.currentLevel = this.levels[index];
     },
     onSlideChange({ index }) {
       this.setActiveIndex(index);
@@ -185,10 +100,10 @@ export default {
   },
   mounted() {
     this.updateItemsToShow();
-    window.addEventListener('resize', this.updateItemsToShow);
+    window.addEventListener("resize", this.updateItemsToShow);
   },
-  beforeUnmount () {
-    window.removeEventListener('resize', this.updateItemsToShow);
+  beforeUnmount() {
+    window.removeEventListener("resize", this.updateItemsToShow);
   },
 };
 </script>
@@ -198,34 +113,30 @@ export default {
   margin: auto;
   background-color: #fff;
   color: #165e84;
-  font-family: 'DIN Next LT Arabic';
+  font-family: "DIN Next LT Arabic";
   font-weight: 500;
   direction: ltr;
-}
-
-.top-half {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
+  background-image: url("@/assets/images/level.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .text-section {
-  width: 40%;
-  padding: 5%;
-  padding-bottom: 0;
+  padding: 0 5%;
+  text-align: center;
 }
 
 .text-section h1 {
   font-size: 3em;
   margin-bottom: 20px;
-  font-family: 'DIN Next LT Arabic-n';
-  font-weight: 700;
+  font-family: "DIN Next LT Arabic";
+  font-weight: 500;
 }
 
 .text-section p {
   font-size: 1.1em;
-  margin-bottom: 40px;
   color: #7c7c7c;
+  padding: 0 25%;
 }
 
 .info-section {
@@ -249,7 +160,7 @@ export default {
 .info-item p {
   color: #ff6600;
   margin-bottom: 10px;
-  font-family: 'DIN Next LT Arabic-n';
+  font-family: "DIN Next LT Arabic-n";
   font-weight: 700;
   font-size: 1.8em;
 }
@@ -258,7 +169,6 @@ export default {
   font-size: 1.4em;
   color: #666;
 }
-
 
 .slider-section {
   overflow: hidden;
@@ -276,10 +186,11 @@ export default {
   padding: 5%;
   border-radius: 15px;
   transition: transform 0.3s ease, border-color 0.3s ease;
+  background-color: #fff;
 }
 
 .level-card-inner {
-  padding: 50px 10px 50px 10px;
+  padding: 50px;
   border-radius: 15px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -301,22 +212,18 @@ export default {
 .level-main {
   font-size: 1.5rem;
   color: #333;
-  font-weight: 700;
-  font-family: 'DIN Next LT Arabic-n';
+  font-weight: 500;
 }
 
 .level-title {
-  font-size: 1.3rem;
+  font-family: "DIN Next LT Arabic";
+  font-size: 1.8rem;
   font-weight: 500;
   color: #333;
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-  .top-half {
-    flex-direction: column;
-  }
-
   .text-section {
     width: 100%;
     padding: 5%;
@@ -375,5 +282,24 @@ export default {
   .level-title {
     font-size: 1.2rem;
   }
+}
+button {
+  width: 30%;
+  padding: 0.5rem 1.5rem 1rem 1.5rem;
+  background: linear-gradient(45deg, #fe9b4f, #f77919);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-family: "DIN Next LT Arabic";
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #f47e23, #fe9b4f);
+  transform: scale(1.05);
 }
 </style>
