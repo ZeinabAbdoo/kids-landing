@@ -3,15 +3,17 @@
   <div class="kids-sec1">
     <div class="text-container">
       <h3>تعليم الصغار</h3>
-      <h1>بناء الأسس وإطلاق العنان لمستقبل مشرق مع مونجلش</h1>
-      <h2>حيث يصبح الامتياز واقعًا</h2>
+      <h1>
+        متخصصون في تعليم اللغة الإنجليزية للصغار بدءًا من التأسيس بمنهج المعايشة
+        الفريد والحصري
+      </h1>
       <p>
-        نفخر بتبنينا لأحدث الأساليب وأكثرها تأثيراً في تعليم اللغة – منهج
-        المعايشة. هذه الطريقة الفريدة والحصرية لدينا تُعد مفتاحنا لتحقيق نتائج
-        استثنائية ومميزة، مما يضمن تجربة تعليمية غنية وعميقة لجميع متعلمينا.
+        منهجنا يعتمد على الانغماس اللغوي والمعايشة اليومية للغة، من خلال النوادي
+        التفاعلية الخاصة بمونجلش والتي تثري رحلة اكتساب اللغة لتحقيق الطلاقة في
+        الإنجليزية بسرعة 4 أضعاف أي منهج آخر.
       </p>
       <button @click="sendMessage" id="kids-wa1-ar">
-        إشترك معنا الأن
+        اشترك معنا الأن
         <i class="fab fa-whatsapp"></i>
       </button>
     </div>
@@ -54,10 +56,12 @@
             </linearGradient>
           </defs>
         </svg>
-        <h1>مواعيد دروس التدريب</h1>
+        <h1>أندية مونجلش التفاعلية</h1>
         <p>
-          مواعيد دروسنا مرنة ومتنوعة، مصممة خصيصًا لتناسب جدول طفلك اليومي دون
-          أي تأثير سلبي علي دراسته، مما يوفر له تجربة تعلم فريدة من نوعها.
+          رحلة ممتعة فريدة من نوعها لاكتساب اللغة الإنجليزية والتحدث بطلاقة في
+          أسرع وقت. نوادي أونلاين تجعل الطالب يتعايش يوميًا مع اللغة بدون ملل أو
+          روتين ليكتسبها من مصادرها الطبيعية وصولا لإتقانها تماماً، والتحدث بها
+          بمنتهى الحرية والثقة
         </p>
       </div>
       <div class="sec2-card card-2">
@@ -86,11 +90,10 @@
             </linearGradient>
           </defs>
         </svg>
-        <h1>أندية مونجلش التفاعلية</h1>
+        <h1>معلمون أجانب وعرب معتمدون دولياً</h1>
         <p>
-          رحلة ممتعة إلى عالم مونجلش المليء بالمغامرات! في أندية مونجلش
-          التفاعلية، كل باب نفتحه يأخذنا إلى عالم ساحر من الألعاب والقصص التي
-          تجعل تعلم اللغة الإنجليزية رحلة شيقة.
+          نفتخر في أكاديمية مونجلش بمعلمينا الحاصلين على شهادات دولية في تدريس
+          اللغات يجسد حرصنا الشديد على إخراج جيل يتحدث الإنجليزية كأهل اللغة.
         </p>
       </div>
       <div class="sec2-card card-3">
@@ -119,11 +122,11 @@
             </linearGradient>
           </defs>
         </svg>
-        <h1>تقارير متابعة للأداء اليومي</h1>
+        <h1>فريق خدمة عملاء احترافي على مدار الساعة</h1>
         <p>
-          لدينا سجل مغامرات خاص لكل بطل صغير! هذا السجل سيخبرك بأداء طفلك و
-          تقدمة كل يوم. و هذا سوف يساعدك على معرفة ما يحتاج إليه طفلك لممارسته
-          أكثر، ويظهر لك كيف يصبح أفضل
+          نتميز بفريق خدمة عملاء ومشرفي فصول أكاديميين يتابعون مستوى تقدم كل
+          طالب بتقارير دورية بعد كل حصة للوصول لأفضل مستوى من التعلم واحتراف
+          التحدث باللغة الإنجليزية.
         </p>
       </div>
     </div>
@@ -209,7 +212,6 @@
             </g>
           </svg>
         </div>
-
         <button class="slider-nav right" @click="nextSlide">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -247,15 +249,23 @@
 
   <!--Section Four Content-->
   <div class="kids-sec4">
-    <h3>معتمدون دوليا</h3>
-    <h2>والجودة العالية في كل خطوة</h2>
+    <h3>اعتماداتنا الدولية تعكس مدى التزامنا</h3>
+    <h2>بتطبيق أعلى معايير الجودة في التعليم</h2>
     <p>
-      أكاديمية مونجلش الدولية معتمدة دولياً من مؤسسات بارزة مثل المنظمة الدولية
-      لجودة التدريب (IOTQ) وحاصلة على شهادة ISO 9001:2015 من الاتحاد الأمريكي
-      للاعتماد (UAF). نحن أيضاً أعضاء في الجمعية الأمريكية للاعتماد (AAA)،
-      الجمعية المصرية للجودة (ESQ)، ومنظمة الجودة العربية (AROQA) تحت مظلة طلال
-      أبو غزالة (TAG-ORG)، مما يعكس التزامنا بالمعايير العالمية للتعليم العالي.
+      أكاديمية مونجلش الدولية معتمدة من هيئة المعرفة والتدريب بدبي، كما أنها
+      معتمدة دولياً من مؤسسات بارزة مثل المنظمة الدولية لجودة التدريب (IOTQ)
+      وحاصلة على شهادة ISO 9001:2015 من الاتحاد الأمريكي للاعتماد (UAF).
+      <br />
+      نحن أيضاً أعضاء في منظمة الجودة العربية (AROQA)، الجمعية الأمريكية
+      للاعتماد (AAA)، الجمعية المصرية للجودة (ESQ)، وشهادات ISO 29993 وISO
+      29994، مما يعكس التزامنا بالمعايير العالمية للتعليم العالي التابعة لمنظمة
+      طلال أبو غزالة المرموقة (TAG-ORG).
     </p>
+
+    <button @click="sendMessage" id="kids-wa5-ar">
+      إشترك معنا الأن
+      <i class="fab fa-whatsapp"></i>
+    </button>
     <div class="kids-sec4-imgs">
       <img src="@/assets/images/accreditations/1.webp" />
       <img src="@/assets/images/accreditations/2.webp" />
@@ -267,6 +277,8 @@
       <img src="@/assets/images/accreditations/8.webp" />
       <img src="@/assets/images/accreditations/9.webp" />
       <img src="@/assets/images/accreditations/10.webp" />
+      <img src="@/assets/images/accreditations/11.webp" />
+      <img src="@/assets/images/accreditations/12.webp" />
     </div>
   </div>
 
@@ -292,7 +304,6 @@
   </div>
 
   <!--Section Six Content-->
-  <KidsLevels />
 
   <!--Section Eight Content-->
   <div class="kids-sec8">
@@ -309,53 +320,12 @@
       </p>
     </div>
 
-    <div class="adult-swiper">
-      <div ref="swiperContainer" class="swiper-container">
-        <div class="swiper-wrapper">
-          <div
-            v-for="(review, index) in reviews"
-            :key="index"
-            class="swiper-slide"
-          >
-            <div class="quote-icon">
-              <svg
-                width="30"
-                height="30"
-                viewBox="0 0 40 37"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12.18 17.808H2.8C2.96 8.46795 4.8 6.92796 10.54 3.52796C11.2 3.12796 11.42 2.28796 11.02 1.60796C10.9279 1.45051 10.8053 1.31298 10.6595 1.2034C10.5137 1.09381 10.3475 1.01436 10.1706 0.96968C9.99376 0.925 9.80977 0.915984 9.62939 0.943158C9.44901 0.970333 9.27585 1.03315 9.12 1.12796C2.36 5.12796 0 7.56796 0 19.188V29.968C0 33.388 2.78 36.148 6.18 36.148H12.18C15.7 36.148 18.36 33.488 18.36 29.968V23.968C18.36 20.468 15.7 17.808 12.18 17.808ZM33.818 17.808H24.438C24.598 8.46795 26.438 6.92796 32.178 3.52796C32.838 3.12796 33.058 2.28796 32.658 1.60796C32.5638 1.45003 32.4393 1.31227 32.2916 1.20261C32.144 1.09295 31.9762 1.01353 31.7978 0.968927C31.6193 0.924324 31.4339 0.915412 31.252 0.942703C31.0701 0.969995 30.8955 1.03295 30.738 1.12796C23.978 5.12796 21.618 7.56796 21.618 19.208V29.988C21.618 33.408 24.398 36.168 27.798 36.168H33.798C37.318 36.168 39.978 33.508 39.978 29.988V23.988C39.998 20.468 37.338 17.808 33.818 17.808Z"
-                  fill="#0C1B2A"
-                />
-              </svg>
-            </div>
-            <p class="review-by">{{ review.by }}</p>
-            <p>{{ review.review }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ReviewSwiper />
   </div>
 
   <!--Section Seven Content-->
-  <div class="kids-sec7">
-    <img
-      src="@/assets/images/kids/Star.png"
-      alt="Corner Image"
-      class="corner2-img"
-    />
-    <h1>مزايا الاكاديمية</h1>
-    <p>
-      نفخر بتقديم تجربة تعليمية فريدة من خلال منهجنا لذي يجمع بين التفاعلية
-      العالية والتطبيقات العملية، مما يضمن تحقيق نتائج مبهرة وتقدم سريع في تعلم
-      اللغة الإنجليزية لجميع الأعمار.
-    </p>
-    <KidsAdvantages />
-  </div>
 
-  <PackagesFoundation />
+  <PackagesBundleF />
 
   <!--Section Nine Content-->
   <div class="kids-sec9">
@@ -596,26 +566,19 @@
 
 <script>
 import ImmerseClubs from "../../components/ar/ImmerseClubs.vue";
-import KidsAdvantages from "../../components/ar/KidsAdvantages.vue";
-import KidsLevels from "../../components/ar/KidsLevels.vue";
 import PackagesKids from "../../components/ar/PackagesKids.vue";
-import PackagesFoundation from "../../components/ar/PackagesFoundation.vue";
+import PackagesBundleF from "../../components/ar/PackagesBundleF.vue";
 import FormSection from "../../components/ar/FormSection.vue";
-
-import Swiper from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import ReviewSwiper from "../../components/ar/ReviewSwiper.vue";
 
 export default {
   name: "KidsCourses",
   components: {
     ImmerseClubs,
-    KidsAdvantages,
-    KidsLevels,
     PackagesKids,
-    PackagesFoundation,
+    PackagesBundleF,
     FormSection,
+    ReviewSwiper
   },
   data() {
     return {
@@ -630,40 +593,11 @@ export default {
           alt: "Video 2 Thumbnail",
         },
         {
-          videoSrc: "https://www.youtube.com/embed/jtEK65Jkb2c?autoplay=1",
+          videoSrc: "https://www.youtube.com/embed/4G2OnuPdyww?autoplay=1",
           src: require("@/assets/images/video/6.png"),
           alt: "Video 1 Thumbnail",
         },
       ],
-      totalSections: 3,
-      currentIndex: 0,
-      reviews: [
-        {
-          stars: 5,
-          review:
-            "جزاك الله خير انا حضرت المحاضرة كامله معاها ماشاء الله أسلوبه متميز يتسم بالهدوء أثناء الشرح",
-          by: "عبد الله عوده",
-        },
-        {
-          stars: 5,
-          review:
-            "الله يعطيكم العافية بصراحه تمنيت اني دخلت عبد الرحمن من زمان لاني لاحظت تطور كبير و هذا بفضل الله وتوفيقة ثم بفضل جهدكم معانا واهتمامكم بأدق ادق التفاصيل و متابعة الواجابات و حرصكم بتذكيرنا بمواعيد الاندية كانه ابن لكم",
-          by: "ام عبد الرحمن",
-        },
-        {
-          stars: 5,
-          review:
-            "لا بجد ما شاء الله ربنا يبارك فيها من أجمل واحسن المدرسين اللي في الأكاديمية و غير الضمير الي عندها ربنا يرضيها يارب في حياتها",
-          by: "والدة إياد",
-        },
-        {
-          stars: 5,
-          review:
-            "السلام عليكم ورحمة الله وبركاته نادي القراءة حقيقي اللي مسؤوله عنه مره ممتازة ما شاء الله و بترد في اسرع وقت وتقوم بتحديد الموعد و ملتزمة جدا جزاها الله خيرا",
-          by: "فهد محمد",
-        },
-      ],
-      swiper: null,
     };
   },
   computed: {
@@ -673,11 +607,6 @@ export default {
   },
   mounted() {
     this.scrollToPackagesWithDelay();
-
-    this.$nextTick(() => {
-      this.initSwiper();
-      window.addEventListener("resize", this.handleResize);
-    });
   },
   beforeUnmount() {
     window.removeEventListener("resize", this.handleResize);
@@ -697,33 +626,6 @@ export default {
       } catch (error) {
         console.error("Error fetching phone number:", error);
       }
-    },
-    initSwiper() {
-      const swiperContainer = this.$refs.swiperContainer;
-      if (swiperContainer) {
-        if (this.swiper) {
-          this.swiper.destroy(true, true);
-        }
-
-        this.swiper = new Swiper(swiperContainer, {
-          loop: true,
-          slidesPerView: window.innerWidth <= 768 ? 1 : 3,
-          spaceBetween: 10,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
-        this.startAutoNavigate();
-      }
-    },
-
-    handleResize() {
-      this.initSwiper();
     },
     openPopup(videoSrc) {
       this.currentVideoSrc = videoSrc;
@@ -764,11 +666,6 @@ export default {
   watch: {
     "$route.hash"() {
       this.scrollToPackagesWithDelay();
-    },
-    reviews(newReviews) {
-      if (newReviews.length > 0) {
-        this.initSwiper();
-      }
     },
   },
 };
@@ -811,7 +708,6 @@ export default {
 .kids-sec1 p {
   font-family: "DIN Next LT Arabic";
   font-weight: 500;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Large desktop */
@@ -836,7 +732,8 @@ export default {
 }
 
 .kids-sec1 button,
-.kids-sec2 button {
+.kids-sec2 button,
+.kids-sec4 button {
   max-width: 50%;
   padding: 0.5rem 1.5rem 1rem 1.5rem;
   background: linear-gradient(45deg, #fe9b4f, #f77919);
@@ -852,7 +749,8 @@ export default {
 }
 
 .kids-sec1 button:hover,
-.kids-sec2 button:hover {
+.kids-sec2 button:hover,
+.kids-sec4 button:hover {
   background: linear-gradient(45deg, #f47e23, #fe9b4f);
   transform: scale(1.05);
 }
@@ -908,6 +806,18 @@ export default {
     background-image: url("@/assets/images/bg2.jpg");
     text-align: center;
     padding: 1rem;
+    z-index: 0;
+  }
+
+  .kids-sec1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(64, 64, 64, 0) 30%, #1e1e1e 100%);
+    z-index: 1;
   }
 
   .text-container {
@@ -917,17 +827,17 @@ export default {
 
   .kids-sec1 h3 {
     font-size: 20px;
-    line-height: 28px;
+    line-height: 20px;
   }
 
   .kids-sec1 h1 {
     font-size: 30px;
-    line-height: 40px;
+    line-height: 30px;
   }
 
   .kids-sec1 h2 {
     font-size: 24px;
-    line-height: 32px;
+    line-height: 30px;
   }
 
   .kids-sec1 p {
@@ -942,19 +852,30 @@ export default {
 
 /* Small mobile view */
 @media (max-width: 480px) {
+  .text-container {
+    max-width: 100%;
+    padding: 0;
+    padding-top: 100%;
+  }
+  .text-container h3 {
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 1px;
+  }
+
   .kids-sec1 h1 {
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 22px;
+    line-height: 30px;
   }
 
   .kids-sec1 h2 {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 23px;
   }
 
   .kids-sec1 p {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 17px;
+    line-height: 23px;
   }
 }
 
@@ -1090,6 +1011,7 @@ export default {
   background-image: url("@/assets/images/vid.png");
   background-size: cover;
   background-position: center;
+  overflow-x: hidden;
 }
 
 .text-content {
@@ -1097,7 +1019,7 @@ export default {
   padding-right: 5%;
 }
 
-.text-content h1 {
+.content-slider-container h1 {
   color: #165e84;
   font-size: 48px;
   font-weight: 500;
@@ -1105,7 +1027,7 @@ export default {
   margin-bottom: 3%;
 }
 
-.text-content h2 {
+.content-slider-container h2 {
   color: #3d3d3d;
   font-size: 40px;
   font-weight: 500;
@@ -1155,23 +1077,11 @@ export default {
 }
 
 .image-thumbnail {
-  width: 400px;
+  width: 350px;
+  height: 600px;
   object-fit: cover;
   cursor: pointer;
-}
-
-.video-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: transform 0.3s ease;
-  pointer-events: none;
-}
-
-.image-container:hover .video-icon {
-  transform: translate(-50%, -50%) scale(1.5);
+  border-radius: 30px;
 }
 
 .video-icon {
@@ -1258,10 +1168,12 @@ export default {
   position: absolute;
   top: 15px;
   right: 20px;
-  font-size: 4rem;
+  font-size: 5rem;
   cursor: pointer;
   transition: color 0.3s ease;
   color: #fff;
+  background-color: transparent;
+  border: none;
 }
 
 .close-button:hover {
@@ -1272,26 +1184,31 @@ export default {
     display: block;
   }
 
-  h1 {
-    font-size: 30px;
-  }
-
-  .slider-nav.left {
-    left: 0;
-  }
-
-  .slider-nav.right {
-    right: 0;
+  .content-slider-container h1 {
+    font-size: 28px;
   }
 
   .popup-content {
-    width: 95%;
+    width: 90%;
     height: auto;
   }
 
   .popup-video {
     height: calc(100vw * (16 / 9));
     width: 100%;
+  }
+
+  .slider-nav svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .slider-nav.left {
+    left: 70%;
+  }
+
+  .slider-nav.right {
+    right: 70%;
   }
 
   .carousel-track {
@@ -1303,9 +1220,12 @@ export default {
     opacity: 1 !important;
   }
 
-  img {
-    width: 80%;
-    height: auto;
+  .image-thumbnail {
+    width: 350px;
+    height: 600px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 30px;
   }
   .text-content h1,
   .text-content p,
@@ -1315,6 +1235,17 @@ export default {
     padding-left: 0;
     text-align: center;
     width: 100%;
+  }
+  .content-slider-container p {
+    font-size: 19px;
+  }
+  .content-slider-container button {
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    display: block;
   }
 }
 
@@ -1332,12 +1263,16 @@ export default {
 /* Large desktop */
 .kids-sec4 h3 {
   font-size: 30px;
-  line-height: 35px;
+  line-height: 30px;
+  font-family: "DIN Next LT Arabic";
+  font-weight: 500;
 }
 
 .kids-sec4 h2 {
   font-size: 42px;
-  line-height: 45px;
+  line-height: 30px;
+  font-family: "DIN Next LT Arabic";
+  font-weight: 500;
 }
 
 .kids-sec4 p {
@@ -1379,32 +1314,41 @@ export default {
 /* Mobile view */
 @media (max-width: 768px) {
   .kids-sec4 h3 {
-    font-size: 20px;
+    font-size: 23px;
     line-height: 28px;
   }
 
   .kids-sec4 h2 {
-    font-size: 24px;
+    font-size: 27px;
     line-height: 32px;
   }
 
   .kids-sec4 p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 22px;
   }
 }
 
 /* Small mobile view */
 @media (max-width: 480px) {
-  .kids-sec4 h2 {
-    font-size: 20px;
-    line-height: 30px;
+  .kids-sec4 h2,
+  .kids-sec4 h3 {
+    font-size: 22px;
+    line-height: 20px;
+    color: #165e84;
   }
 
   .kids-sec4 p {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 17px;
+    line-height: 30px;
     padding: 0;
+  }
+
+  .kids-sec4 button {
+    max-width: 70%;
+    font-size: 1.1rem;
+    margin-bottom: 5%;
+    margin-top: 0;
   }
 }
 
@@ -1548,6 +1492,17 @@ export default {
   padding: 0 20%;
   padding-bottom: 3%;
 }
+@media (max-width: 480px) {
+  .kids-sec7 h1 {
+    font-size: 2em;
+    margin: 0;
+  }
+  .kids-sec7 p {
+    font-size: 1.2em;
+    padding: 0 8%;
+    padding-bottom: 1%;
+  }
+}
 
 /* Section 8 style */
 .kids-sec8 {
@@ -1605,79 +1560,16 @@ export default {
 }
 @media (max-width: 768px) {
   .kids-sec8-row h4 {
-    font-size: 24px;
+    font-size: 25px;
     width: 100%;
   }
   .kids-sec8-row h4 span {
-    font-size: 24px;
+    font-size: 25px;
     width: 100%;
   }
-}
-.adult-swiper {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  margin-top: 1em;
-}
-
-.swiper-container {
-  width: 100%;
-  overflow: hidden;
-}
-
-.swiper-slide {
-  position: relative;
-  padding: 20px;
-  text-align: center;
-  background: linear-gradient(296.63deg, #f47d21 -0.48%, #ff9d52 100.48%);
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 300px;
-  color: #000;
-  font-size: 1.2em;
-}
-.quote-icon {
-  position: absolute;
-  top: 8%;
-  left: 10%;
-  transform: translateX(-50%);
-  font-size: 2em;
-  color: #fff;
-  z-index: 10;
-}
-
-.swiper-slide p {
-  font-family: "DIN Next LT Arabic", sans-serif;
-  font-weight: 500;
-  padding: 0 0.5rem;
-}
-
-.review-stars {
-  color: #000;
-  font-size: 2.5rem;
-}
-.review-by {
-  margin-top: 15px;
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: #000;
-  text-decoration: underline;
-  text-decoration-color: #ffffff;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 10px;
-  font-family: "DIN Next LT Arabic", sans-serif;
-}
-/* Mobile styles */
-@media (max-width: 768px) {
-  .swiper-slide {
-    height: 200px;
-    font-size: 20px;
-  }
-  .review-by {
-    font-size: 22px;
+  .kids-sec8-row p {
+    font-size: 1.2rem;
+    max-width: 100%;
   }
 }
 

@@ -154,20 +154,18 @@ a.blantershow-chat {
 	position: fixed;
 	z-index: 98;
 	bottom: 2%;
-	right: 1%;
-	font-size: 3em;
+	right: 2%;
+	font-size: 2.5em;
 	border-radius: 30px;
 	box-shadow: 0 1px 15px rgba(32, 33, 36, .28);
   display: flex;
-  direction: rtl;
-  padding: 4px 8px;
 }
 a.blantershow-chat i {
-	transform: scale(1);
-	margin: 0 4px 0 4px;
+	transform: scale(1.2);
+	margin: 0 10px 0 0;
 }
 a.blantershow-chat svg{
-  margin: 5px 10px;
+  margin: 0px 10px;
 }
 .header-chat {
 	background: linear-gradient(#25d366, #25d366) 14% 84%/16% 16%;

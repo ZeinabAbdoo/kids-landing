@@ -55,4 +55,25 @@ export default {
     font-family: 'DIN Next LT Arabic';
     font-weight: 500;
 }
+.logo {
+  margin-top: 1%;
+}
+
+.logo svg {
+  width: 147px;
+  height: 54px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    margin-top: 3%;
+  }
+  .logo svg {
+    width: 100px;
+    height: 35px;
+  }
+  .navbar button {
+    font-size: 1rem;
+  }
+}
 </style>

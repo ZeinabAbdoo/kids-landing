@@ -272,6 +272,8 @@
       <img src="@/assets/images/accreditations/8.webp" />
       <img src="@/assets/images/accreditations/9.webp" />
       <img src="@/assets/images/accreditations/10.webp" />
+      <img src="@/assets/images/accreditations/11.webp" />
+      <img src="@/assets/images/accreditations/12.webp" />
     </div>
   </div>
 
@@ -287,20 +289,6 @@
   </div>
 
   <!--Section Seven Content-->
-  <div class="kids-sec7">
-    <img
-      src="@/assets/images/kids/Star.png"
-      alt="Corner Image"
-      class="corner2-img"
-    />
-    <h1>Monglish Academy Features</h1>
-    <p>
-      Our native teachers are experts in phonetics for perfect pronunciations.
-    </p>
-    <KidsAdvantages />
-  </div>
-
-  <KidsLevels />
 
   <!--Section Eight Content-->
   <div class="kids-sec8">
@@ -588,8 +576,6 @@
 
 <script>
 import ImmerseClubs from "../../components/en/ImmerseClubs.vue";
-import KidsAdvantages from "../../components/en/KidsAdvantages.vue";
-import KidsLevels from "../../components/en/KidsLevels.vue";
 import PackagesKids from "../../components/en/PackagesKids.vue";
 import PackagesFoundation from "../../components/en/PackagesFoundation.vue";
 import FormSection from "../../components/en/FormSection.vue";
@@ -603,8 +589,6 @@ export default {
   name: "KidsCourses",
   components: {
     ImmerseClubs,
-    KidsAdvantages,
-    KidsLevels,
     PackagesKids,
     PackagesFoundation,
     FormSection,
@@ -793,7 +777,6 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
 }
 
 .text-container {
@@ -903,26 +886,38 @@ export default {
     background-image: url("@/assets/images/bg2.jpg");
     text-align: center;
     padding: 1rem;
+    z-index: 0;
+  }
+
+  .kids-sec1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(64, 64, 64, 0) 30%, #1e1e1e 100%);
+    z-index: 1;
   }
 
   .text-container {
-    padding-right: 0%;
+    max-width: 100%;
     padding-top: 90%;
   }
 
   .kids-sec1 h3 {
     font-size: 20px;
-    line-height: 28px;
+    line-height: 20px;
   }
 
   .kids-sec1 h1 {
     font-size: 30px;
-    line-height: 40px;
+    line-height: 30px;
   }
 
   .kids-sec1 h2 {
     font-size: 24px;
-    line-height: 32px;
+    line-height: 30px;
   }
 
   .kids-sec1 p {
@@ -936,20 +931,31 @@ export default {
 }
 
 /* Small mobile view */
-@media (max-width: 414px) {
+@media (max-width: 480px) {
+  .text-container {
+    max-width: 100%;
+    padding: 0;
+    padding-top: 100%;
+  }
+  .text-container h3 {
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 1px;
+  }
+
   .kids-sec1 h1 {
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 22px;
+    line-height: 30px;
   }
 
   .kids-sec1 h2 {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 23px;
   }
 
   .kids-sec1 p {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 17px;
+    line-height: 23px;
   }
 }
 
@@ -1266,8 +1272,8 @@ export default {
     display: block;
   }
 
-  h1 {
-    font-size: 30px;
+  .content-slider-container h1 {
+    font-size: 28px;
   }
 
   .slider-nav.left {
@@ -1309,6 +1315,17 @@ export default {
     padding-left: 0;
     text-align: center;
     width: 100%;
+  }
+  .content-slider-container p {
+    font-size: 19px;
+  }
+  .content-slider-container button {
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    display: block;
   }
 }
 

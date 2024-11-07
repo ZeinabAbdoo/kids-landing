@@ -33,7 +33,7 @@
 <script>
 import { Carousel, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
-import { ref, onMounted, onBeforeUnmount, watch } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 export default {
   components: { Carousel, Slide },
@@ -68,10 +68,6 @@ export default {
    const autoplay = () => {
       currentSlide.value = (currentSlide.value + 1) % clubs.value.length;
     };
-
-    watch(currentSlide, (newValue) => {
-      console.log('Current slide changed to:', newValue);
-    });
 
     onMounted(() => {
       updateItemsToShow();
@@ -117,33 +113,39 @@ export default {
   height: 95%;
 }
 .kids-card-img {
-  width: 20%; 
-  height: auto; 
+  width: 80px;
+  height: 80px;
   object-fit: cover;
   border-radius: 0.5em;
+  margin-left: auto;
 }
+
 .kids-card-content {
-  height: auto; 
-  padding: 1rem;
+  height: auto;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
 }
+
 .kids-card-title {
   font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  font-family: 'DIN Next LT Arabic';
+  font-weight: 500;
+  line-height: 30px;
+  font-family: "DIN Next LT Arabic";
 }
+
 .kids-card-description {
   font-size: 1.25em;
   color: #6b6b6b;
 }
+
 .pagination {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
+
 .pagination button {
   margin: 0 0.5rem;
   padding: 0.5rem 0.5rem;
@@ -152,21 +154,34 @@ export default {
   border-radius: 0.5rem;
   cursor: pointer;
 }
+
 .pagination button.active {
-  background-color: #165E84;
+  background-color: #165e84;
   padding: 0.5rem 1rem;
 }
-@media (max-width: 767px) {
+
+@media (max-width: 768px) {
   .kids-card {
     width: 100%;
   }
+
   .pagination button {
-  margin: 0 0.25rem;
-  padding: 0.4rem 0.4rem;
-}
-.pagination button.active {
-  padding: 0.4rem 0.8rem;
-}
+    margin: 0 0.25rem;
+    padding: 0.4rem 0.4rem;
+  }
+
+  .pagination button.active {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .kids-card-content {
+    padding: 0rem;
+  }
+  .kids-card-title {
+    font-size: 1.3rem;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
 }
 @media (min-width: 768px) {
   .kids-card {

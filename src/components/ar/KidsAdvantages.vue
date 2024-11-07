@@ -129,4 +129,43 @@ export default {
 .even-card .advantage-svg {
   background-color: rgba(253, 151, 73, 0.6); 
 }
+@media (max-width: 480px) { 
+  .Kids-advantages {
+  gap: 1em;
+}
+
+.advantage-card {
+  background-color: #fff;
+  border-radius: 1.5em;
+  padding: 30px;
+  text-align: center;
+  width: 180px;
+  flex: 1 1 calc(20% - 20px); 
+}
+
+.advantage-svg {
+  margin: 30px auto 10px; 
+  border-radius: 1em; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px; 
+  height: 64px; 
+}
+
+.advantage-card h2 {
+  font-size: 1.4em;
+  margin: 10px 0;
+  color: black;
+  font-family: 'DIN Next LT Arabic';
+  font-weight: 500;
+}
+
+.advantage-card p {
+  font-size: 1em;
+  color: #aaaaaa;
+  font-family: 'DIN Next LT Arabic';
+  font-weight: 500;
+}
+}
 </style>
