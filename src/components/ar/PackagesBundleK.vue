@@ -1,7 +1,7 @@
 <template>
   <div class="packages">
     <img
-      src="@/assets/images/bundle1.png"
+      src="@/assets/images/bundle2.png"
       alt="Bundle Image"
       class="bundle-image"
     />
@@ -10,20 +10,16 @@
         <p class="offer-text">سنة كاملة ضعف المدة بسعر 1140 دولار فقط!</p>
       </div>
       <div class="blurred-box">
-        <h4>اغتنم عروض الجمعة البيضاء <span>(لمرحلة التأسيس)</span></h4>
+        <h4>اغتنم عروض الجمعة البيضاء <span>(للأطفال)</span></h4>
         <h2>احصل على <span>ضعف المدة بنفس السعر!</span></h2>
         <p>
-          احتفالًا بمناسبة الجمعة البيضاء، نقدم لك فرصة استثنائية لتأسيس طفلك
-          الصغير في اللغة الإنجليزية! سجّل الآن واحصل على 6 أشهر من التعليم
-          الممتع، واحصل على 6 أشهر إضافية مجانًا! مع برامجنا المبتكرة والمصممة
-          خصيصًا للأطفال الأصغر عمرًا، سيتحول تعلم اللغة الإنجليزية إلى تجربة
-          تأسيسية مثيرة وملهمة لطفلك.
+            احتفالًا بمناسبة الجمعة البيضاء، نقدم لك فرصة استثنائية! سجّل الآن واحصل على 6 أشهر من التعليم الممتع، واحصل على 6 أشهر إضافية مجانًا! مع برامجنا المبتكرة، سيتحول تعلم اللغة الإنجليزية إلى تجربة مثيرة وملهمة لطفلك.
         </p>
         <h3>لا تفوت هذه الفرصة المميزة واستمتع بعروض الجمعة البيضاء!</h3>
-        <button @click="addToCart(prices[35]?.packageId)" id="pg-ar-foundation">
+        <button @click="addToCart(prices[36]?.packageId)" id="pg-ar-kids">
           احجز لطفلك الآن!
         </button>
-        <button @click="sendMessage" id="kids-wa5-ar">
+        <button @click="sendMessage" id="kids-wa6-ar">
           لمعرفة الأسعار للمدد الأقل، تواصل معنا!
           <i class="fab fa-whatsapp"></i>
         </button>
@@ -38,8 +34,8 @@
   justify-content: space-between;
   align-items: center;
   direction: rtl;
-  background-image: url("@/assets/images/foundation.png");
-  background-size: cover;
+  background-image: url("@/assets/images/kids.png");
+   background-size: cover;
   background-position: center;
   font-family: "DIN Next LT Arabic", sans-serif;
   padding: 3% 0;
@@ -55,15 +51,15 @@
 }
 
 .bundle-info {
-  background-color: #fff8f3;
-  border: 1px solid #f47d21;
+  background-color: transparent;
+  border: 1px solid #fff;
   border-radius: 20px;
   text-align: center;
   width: 50%;
 }
 
 .offer-text {
-  color: #f47d21;
+  color: #fff;
   font-size: 20px;
   font-weight: 500;
 }
@@ -319,7 +315,7 @@ button:hover {
   }
 
   .packages {
-    background: url("@/assets/images/foundation2.png"),
+    background: url("@/assets/images/kids2.png"),
       linear-gradient(180deg, rgba(64, 64, 64, 0) 30%, #1e1e1e 100%);
     min-height: 140vh;
     background-size: cover;
@@ -390,7 +386,7 @@ export default {
     };
   },
   methods: {
-       async sendMessage() {
+        async sendMessage() {
       try {
         const response = await fetch(
           `https://service.monglish.co.uk/api/get-phone-number`

@@ -1,30 +1,32 @@
 <template>
   <div class="packages">
     <img
-      src="@/assets/images/bundle1.png"
+      src="@/assets/images/bundle2-en.png"
       alt="Bundle Image"
       class="bundle-image"
     />
     <div class="packages-text">
       <div class="bundle-info">
-        <p class="offer-text">سنة كاملة ضعف المدة بسعر 1140 دولار فقط!</p>
+        <p class="offer-text">
+          A full year, double the duration, for only $1140!
+        </p>
       </div>
       <div class="blurred-box">
-        <h4>اغتنم عروض الجمعة البيضاء <span>(لمرحلة التأسيس)</span></h4>
-        <h2>احصل على <span>ضعف المدة بنفس السعر!</span></h2>
+        <h4>White Friday Deals <span>(For Children)</span></h4>
+        <h2><span>Double the time, same price!</span></h2>
         <p>
-          احتفالًا بمناسبة الجمعة البيضاء، نقدم لك فرصة استثنائية لتأسيس طفلك
-          الصغير في اللغة الإنجليزية! سجّل الآن واحصل على 6 أشهر من التعليم
-          الممتع، واحصل على 6 أشهر إضافية مجانًا! مع برامجنا المبتكرة والمصممة
-          خصيصًا للأطفال الأصغر عمرًا، سيتحول تعلم اللغة الإنجليزية إلى تجربة
-          تأسيسية مثيرة وملهمة لطفلك.
+          Celebrate White Friday! Register now for 6 months of fun learning and
+          get 6 extra months free! Our innovative programs make English learning
+          exciting for your child.
         </p>
-        <h3>لا تفوت هذه الفرصة المميزة واستمتع بعروض الجمعة البيضاء!</h3>
-        <button @click="addToCart(prices[35]?.packageId)" id="pg-ar-foundation">
-          احجز لطفلك الآن!
+        <h3>
+          Don’t miss this special opportunity and enjoy the White Friday offers!
+        </h3>
+        <button @click="addToCart(prices[36]?.packageId)" id="pg-en-kids">
+          Book for your child now!
         </button>
-        <button @click="sendMessage" id="kids-wa5-ar">
-          لمعرفة الأسعار للمدد الأقل، تواصل معنا!
+        <button @click="sendMessage" id="kids-wa6-en">
+          For shorter durations, contact us!
           <i class="fab fa-whatsapp"></i>
         </button>
       </div>
@@ -37,10 +39,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  direction: rtl;
-  background-image: url("@/assets/images/foundation.png");
+  direction: ltr;
+  background-image: url("@/assets/images/kids-en.png");
   background-size: cover;
-  background-position: center;
+  background-position: right center;
   font-family: "DIN Next LT Arabic", sans-serif;
   padding: 3% 0;
 }
@@ -51,7 +53,8 @@
 
 .bundle-image {
   z-index: 1;
-  margin-right: 250px;
+  width: 30%;
+  margin-left: 150px;
 }
 
 .bundle-info {
@@ -70,8 +73,8 @@
 
 .blurred-box {
   background: rgba(44, 44, 44, 0.548);
-  text-align: right;
-  margin-right: -50px;
+  text-align: left;
+  margin-left: -100px;
 }
 
 .blurred-box h4,
@@ -80,7 +83,7 @@
 .blurred-box h3 {
   color: #fff;
   font-weight: 500;
-  padding-right: 6%;
+  padding-left: 6%;
   line-height: 0px;
 }
 
@@ -128,7 +131,7 @@ button {
   cursor: pointer;
   font-size: 1.3rem;
   margin: 0.5rem 0;
-  margin-right: 6%;
+  margin-left: 6%; /* Adjust to LTR layout */
   font-weight: 500;
   transition: background 0.3s ease, transform 0.3s ease;
   font-family: "DIN Next LT Arabic", sans-serif;
@@ -139,7 +142,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-#kids-wa5-ar {
+#kids-wa5-en {
   background: transparent;
   border: 1px solid #fff;
 }
@@ -148,11 +151,11 @@ button:hover {
 /* 1440px */
 @media (max-width: 1440px) {
   .packages-text {
-    width: 55%;
+    width: 65%;
   }
 
   .bundle-image {
-    margin-right: 140px;
+    margin-left: 140px;
   }
 
   .blurred-box h4,
@@ -189,7 +192,7 @@ button:hover {
   }
 
   .bundle-image {
-    margin-right: 180px;
+    margin-left: 180px;
     width: 30%;
   }
 
@@ -235,7 +238,7 @@ button:hover {
   }
 
   .bundle-image {
-    margin-right: 100px;
+    margin-left: 100px;
     width: 28%;
   }
 
@@ -284,7 +287,7 @@ button:hover {
   }
 
   .bundle-image {
-    margin-right: 20px;
+    margin-left: 20px;
     width: 28%;
   }
 
@@ -319,7 +322,7 @@ button:hover {
   }
 
   .packages {
-    background: url("@/assets/images/foundation2.png"),
+    background: url("@/assets/images/kids2.png"),
       linear-gradient(180deg, rgba(64, 64, 64, 0) 30%, #1e1e1e 100%);
     min-height: 140vh;
     background-size: cover;
@@ -338,7 +341,7 @@ button:hover {
   .blurred-box {
     background: transparent;
     text-align: center;
-    margin-right: 0;
+    margin-left: 0;
   }
   .blurred-box h4,
   .blurred-box h2,

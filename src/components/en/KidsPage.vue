@@ -307,37 +307,10 @@
       </p>
     </div>
 
-    <div class="adult-swiper">
-      <div ref="swiperContainer" class="swiper-container">
-        <div class="swiper-wrapper">
-          <div
-            v-for="(review, index) in reviews"
-            :key="index"
-            class="swiper-slide"
-          >
-            <div class="quote-icon">
-              <svg
-                width="30"
-                height="30"
-                viewBox="0 0 40 37"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12.18 17.808H2.8C2.96 8.46795 4.8 6.92796 10.54 3.52796C11.2 3.12796 11.42 2.28796 11.02 1.60796C10.9279 1.45051 10.8053 1.31298 10.6595 1.2034C10.5137 1.09381 10.3475 1.01436 10.1706 0.96968C9.99376 0.925 9.80977 0.915984 9.62939 0.943158C9.44901 0.970333 9.27585 1.03315 9.12 1.12796C2.36 5.12796 0 7.56796 0 19.188V29.968C0 33.388 2.78 36.148 6.18 36.148H12.18C15.7 36.148 18.36 33.488 18.36 29.968V23.968C18.36 20.468 15.7 17.808 12.18 17.808ZM33.818 17.808H24.438C24.598 8.46795 26.438 6.92796 32.178 3.52796C32.838 3.12796 33.058 2.28796 32.658 1.60796C32.5638 1.45003 32.4393 1.31227 32.2916 1.20261C32.144 1.09295 31.9762 1.01353 31.7978 0.968927C31.6193 0.924324 31.4339 0.915412 31.252 0.942703C31.0701 0.969995 30.8955 1.03295 30.738 1.12796C23.978 5.12796 21.618 7.56796 21.618 19.208V29.988C21.618 33.408 24.398 36.168 27.798 36.168H33.798C37.318 36.168 39.978 33.508 39.978 29.988V23.988C39.998 20.468 37.338 17.808 33.818 17.808Z"
-                  fill="#0C1B2A"
-                />
-              </svg>
-            </div>
-            <p class="review-by">{{ review.by }}</p>
-            <p>{{ review.review }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ReviewSwiper />
   </div>
 
-  <PackagesFoundation />
+  <PackagesBundleF />
 
   <!--Section Nine Content-->
   <div class="kids-sec9">
@@ -568,7 +541,7 @@
     </div>
   </div>
 
-  <PackagesKids ref="packagesSection" />
+  <PackagesBundleK />
 
   <!--Section Ten Content-->
   <FormSection />
@@ -576,9 +549,10 @@
 
 <script>
 import ImmerseClubs from "../../components/en/ImmerseClubs.vue";
-import PackagesKids from "../../components/en/PackagesKids.vue";
-import PackagesFoundation from "../../components/en/PackagesFoundation.vue";
+import PackagesBundleK from "../../components/en/PackagesBundleK.vue";
+import PackagesBundleF from "../../components/en/PackagesBundleF.vue";
 import FormSection from "../../components/en/FormSection.vue";
+import ReviewSwiper from "../../components/ar/ReviewSwiper.vue";
 
 import Swiper from "swiper";
 import "swiper/css";
@@ -589,9 +563,10 @@ export default {
   name: "KidsCourses",
   components: {
     ImmerseClubs,
-    PackagesKids,
-    PackagesFoundation,
+    PackagesBundleK,
+    PackagesBundleF,
     FormSection,
+    ReviewSwiper,
   },
   data() {
     return {
@@ -659,17 +634,36 @@ export default {
     window.removeEventListener("resize", this.handleResize);
   },
   methods: {
-    async sendMessage() {
+        async sendMessage() {
       try {
         const response = await fetch(
           `https://service.monglish.co.uk/api/get-phone-number`
         );
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          console.log("Network response was not ok");
         }
         const data = await response.json();
-        const url = `https://wa.me/${data.phone_number}`;
-        window.open(url, "_blank");
+        this.getNumber = data.phone_number;
+
+        if (this.getNumber) {
+          const baseUrl =
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+              navigator.userAgent
+            )
+              ? "whatsapp://send"
+              : "https://web.whatsapp.com/send";
+
+          // Encode the Arabic message
+          const arabicMessage = encodeURIComponent(
+            "تفاصيل منهج المعايشة للأطفال"
+          );
+
+          // Create the WhatsApp URL with the predefined message
+          const url = `${baseUrl}?phone=${this.getNumber}&text=${arabicMessage}`;
+
+          // Open WhatsApp
+          window.open(url, "_blank");
+        }
       } catch (error) {
         console.error("Error fetching phone number:", error);
       }
@@ -1086,7 +1080,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  direction: rtl;
+  direction: ltr;
   background-image: url("@/assets/images/vid.png");
   background-size: cover;
   background-position: center;
@@ -1094,7 +1088,7 @@ export default {
 
 .text-content {
   flex: 1;
-  padding-right: 5%;
+  padding-left: 5%;
 }
 
 .text-content h1 {
@@ -1562,7 +1556,7 @@ export default {
 
 /* Section 8 style */
 .kids-sec8 {
-  padding: 1% 2% 0 2%;
+  padding: 2%;
   background-color: white;
   height: auto;
   direction: ltr;

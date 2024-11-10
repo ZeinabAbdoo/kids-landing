@@ -57,12 +57,7 @@
           </defs>
         </svg>
         <h1>أندية مونجلش التفاعلية</h1>
-        <p>
-          رحلة ممتعة فريدة من نوعها لاكتساب اللغة الإنجليزية والتحدث بطلاقة في
-          أسرع وقت. نوادي أونلاين تجعل الطالب يتعايش يوميًا مع اللغة بدون ملل أو
-          روتين ليكتسبها من مصادرها الطبيعية وصولا لإتقانها تماماً، والتحدث بها
-          بمنتهى الحرية والثقة
-        </p>
+<p> تجربة فريدة لتعلم اللغة الإنجليزية والتحدث بطلاقة في وقت قياسي. نوادي أونلاين تتيح للطلاب التفاعل مع اللغة يومياً، مما يساعدهم على اكتسابها من مصادرها الطبيعية بثقة وحرية. </p>
       </div>
       <div class="sec2-card card-2">
         <svg
@@ -122,7 +117,7 @@
             </linearGradient>
           </defs>
         </svg>
-        <h1>فريق خدمة عملاء احترافي على مدار الساعة</h1>
+        <h1>خدمة عملاء على مدار الساعة</h1>
         <p>
           نتميز بفريق خدمة عملاء ومشرفي فصول أكاديميين يتابعون مستوى تقدم كل
           طالب بتقارير دورية بعد كل حصة للوصول لأفضل مستوى من التعلم واحتراف
@@ -329,227 +324,18 @@
 
   <!--Section Nine Content-->
   <div class="kids-sec9">
+    <!-- Title at the top -->
+    <h2>
+      نعدكم بتجربة فريدة وغامرة <br />
+      في رحلة تعليمية شاملة
+    </h2>
+
+    <!-- Content section (text and image in a row) -->
     <div class="kids-sec9-content">
       <div class="kids-sec9-text">
-        <h2>
-          نعدكم بالجودة والإتقان
-          <br />
-          لأن فريقنا الأقوى أكاديميًّا
-        </h2>
         <p>
-          باختيارك أكاديمية مونجلش، تستفيد من منهجية تعليمية مبتكرة، دورات
-          متنوعة تلائم كل الفئات العمرية، وإرشاد متخصص يضمن تحقيقك لأعلى مستويات
-          الإنجاز في مسارك اللغوي والمهني.
-        </p>
-        <div
-          @click="toggleDescription(1)"
-          class="kids-sec9-title"
-          :class="{ active: activeDescription === 1 }"
-        >
-          <span>متخصصين</span>
-          <span class="caret"
-            ><svg
-              width="24px"
-              height="24px"
-              viewBox="0 0 1024 1024"
-              class="icon"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#000000"
-              transform="rotate(180)"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M917.333333 364.8L851.2 298.666667 512 637.866667 172.8 298.666667 106.666667 364.8 512 768z"
-                  fill="#6f8286"
-                ></path>
-              </g></svg
-          ></span>
-        </div>
-        <p v-if="activeDescription === 1">
-          لدينا فرق أكاديمية متخصصة لتدريب الشباب والمتعلمين البالغين.
-        </p>
-
-        <div
-          @click="toggleDescription(2)"
-          class="kids-sec9-title"
-          :class="{ active: activeDescription === 2 }"
-        >
-          <span>عالمين</span>
-          <span class="caret"
-            ><svg
-              width="24px"
-              height="24px"
-              viewBox="0 0 1024 1024"
-              class="icon"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#000000"
-              transform="rotate(180)"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M917.333333 364.8L851.2 298.666667 512 637.866667 172.8 298.666667 106.666667 364.8 512 768z"
-                  fill="#6f8286"
-                ></path>
-              </g></svg
-          ></span>
-        </div>
-        <p v-if="activeDescription === 2">
-          لدينا أكثر من 20 عامًا من الخبرة الأكاديمية في العمل مع المنظمات
-          الدولية الكبرى في الشرق الأوسط، آسيا، أوروبا وأمريكا.
-        </p>
-
-        <div
-          @click="toggleDescription(3)"
-          class="kids-sec9-title"
-          :class="{ active: activeDescription === 3 }"
-        >
-          <span>مؤهلين</span>
-          <span class="caret"
-            ><svg
-              width="24px"
-              height="24px"
-              viewBox="0 0 1024 1024"
-              class="icon"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#000000"
-              transform="rotate(180)"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M917.333333 364.8L851.2 298.666667 512 637.866667 172.8 298.666667 106.666667 364.8 512 768z"
-                  fill="#6f8286"
-                ></path>
-              </g></svg
-          ></span>
-        </div>
-        <p v-if="activeDescription === 3">
-          خبراء في تعليم فن التحدث باللغة الإنجليزية بطلاقة كالأمريكيين
-        </p>
-
-        <div
-          @click="toggleDescription(4)"
-          class="kids-sec9-title"
-          :class="{ active: activeDescription === 4 }"
-        >
-          <span>مبدعين</span>
-          <span class="caret"
-            ><svg
-              width="24px"
-              height="24px"
-              viewBox="0 0 1024 1024"
-              class="icon"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#000000"
-              transform="rotate(180)"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M917.333333 364.8L851.2 298.666667 512 637.866667 172.8 298.666667 106.666667 364.8 512 768z"
-                  fill="#6f8286"
-                ></path>
-              </g></svg
-          ></span>
-        </div>
-        <p v-if="activeDescription === 4">
-          خبراء في تعليم فن التحدث باللغة الإنجليزية بطلاقة كالأمريكيين
-        </p>
-
-        <div
-          @click="toggleDescription(5)"
-          class="kids-sec9-title"
-          :class="{ active: activeDescription === 5 }"
-        >
-          <span>قادرين</span>
-          <span class="caret"
-            ><svg
-              width="24px"
-              height="24px"
-              viewBox="0 0 1024 1024"
-              class="icon"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#000000"
-              transform="rotate(180)"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M917.333333 364.8L851.2 298.666667 512 637.866667 172.8 298.666667 106.666667 364.8 512 768z"
-                  fill="#6f8286"
-                ></path>
-              </g></svg
-          ></span>
-        </div>
-        <p v-if="activeDescription === 5">
-          خبراء في وضع الأسس وكذلك في تعليم الصوتيات والقراءة بمستوي ممتاز.
-        </p>
-
-        <div
-          @click="toggleDescription(6)"
-          class="kids-sec9-title"
-          :class="{ active: activeDescription === 6 }"
-        >
-          <span>مُتقنون</span>
-          <span class="caret"
-            ><svg
-              width="24px"
-              height="24px"
-              viewBox="0 0 1024 1024"
-              class="icon"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#000000"
-              transform="rotate(180)"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M917.333333 364.8L851.2 298.666667 512 637.866667 172.8 298.666667 106.666667 364.8 512 768z"
-                  fill="#6f8286"
-                ></path>
-              </g></svg
-          ></span>
-        </div>
-        <p v-if="activeDescription === 6">
-          خبراء في التدريب على مهارات المحادثة والطلاقة
+          “باختيارك أكاديمية مونجلش الدولية فأنت على الطريق الصحيح لإتقان اللغة
+          الإنجليزية والتحدث بها كأهل اللغة في أقصر وقت”
         </p>
       </div>
       <div class="kids-sec9-images">
@@ -558,7 +344,7 @@
     </div>
   </div>
 
-  <PackagesKids ref="packagesSection" />
+  <PackagesBundleK ref="packagesSection" />
 
   <!--Section Ten Content-->
   <FormSection />
@@ -566,7 +352,7 @@
 
 <script>
 import ImmerseClubs from "../../components/ar/ImmerseClubs.vue";
-import PackagesKids from "../../components/ar/PackagesKids.vue";
+import PackagesBundleK from "../../components/ar/PackagesBundleK.vue";
 import PackagesBundleF from "../../components/ar/PackagesBundleF.vue";
 import FormSection from "../../components/ar/FormSection.vue";
 import ReviewSwiper from "../../components/ar/ReviewSwiper.vue";
@@ -575,10 +361,10 @@ export default {
   name: "KidsCourses",
   components: {
     ImmerseClubs,
-    PackagesKids,
+    PackagesBundleK,
     PackagesBundleF,
     FormSection,
-    ReviewSwiper
+    ReviewSwiper,
   },
   data() {
     return {
@@ -612,17 +398,36 @@ export default {
     window.removeEventListener("resize", this.handleResize);
   },
   methods: {
-    async sendMessage() {
+       async sendMessage() {
       try {
         const response = await fetch(
           `https://service.monglish.co.uk/api/get-phone-number`
         );
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          console.log("Network response was not ok");
         }
         const data = await response.json();
-        const url = `https://wa.me/${data.phone_number}`;
-        window.open(url, "_blank");
+        this.getNumber = data.phone_number;
+
+        if (this.getNumber) {
+          const baseUrl =
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+              navigator.userAgent
+            )
+              ? "whatsapp://send"
+              : "https://web.whatsapp.com/send";
+
+          // Encode the Arabic message
+          const arabicMessage = encodeURIComponent(
+            "تفاصيل منهج المعايشة للأطفال"
+          );
+
+          // Create the WhatsApp URL with the predefined message
+          const url = `${baseUrl}?phone=${this.getNumber}&text=${arabicMessage}`;
+
+          // Open WhatsApp
+          window.open(url, "_blank");
+        }
       } catch (error) {
         console.error("Error fetching phone number:", error);
       }
@@ -1507,9 +1312,7 @@ export default {
 /* Section 8 style */
 .kids-sec8 {
   padding: 2%;
-  align-items: center;
-  background-image: url("@/assets/images/kids/sec3-bg.jpg");
-  background-size: cover;
+  background-color: white;
   background-position: center;
   text-align: center;
   height: auto;
@@ -1576,6 +1379,7 @@ export default {
 /* Section 9 style */
 .kids-sec9 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 1em;
@@ -1585,95 +1389,74 @@ export default {
   color: #4e5354;
   position: relative;
   direction: rtl;
+  overflow-x: hidden;
 }
-.kids-sec9-content {
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-  margin: auto;
-}
-.kids-sec9-images img {
-  width: 100%;
-  height: auto;
-}
-.kids-sec9-text {
-  padding-right: 1em;
-  max-width: 100%;
+
+.kids-sec9 h2 {
   text-align: center;
-}
-.kids-sec9-text h2 {
-  font-size: 2rem;
   font-weight: 500;
   margin-bottom: 1rem;
   color: #165e84;
   font-family: "DIN Next LT Arabic";
+  width: 100%;
 }
-.kids-sec9-text .kids-sec9-title {
-  font-size: 1.3rem;
-  font-weight: 500;
-  margin: 1rem 0;
-  cursor: pointer;
-  color: #6f8286;
-  font-family: "DIN Next LT Arabic";
+
+.kids-sec9-content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  width: 100%;
 }
-.kids-sec9-text .kids-sec9-title.active {
-  color: #ff6f00;
+
+.kids-sec9-text {
+  text-align: center;
 }
-.kids-sec9-text .caret svg path {
-  fill: #6f8286;
-  transition: fill 0.3s ease;
-}
-.kids-sec9-text .kids-sec9-title.active .caret svg path {
-  fill: #ff6f00;
-}
-.kids-sec9-text .caret {
-  transition: transform 0.3s ease;
-}
-.kids-sec9-text .kids-sec9-title.active .caret {
-  transform: rotate(180deg);
-}
+
 .kids-sec9-text p {
-  font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.6;
 }
-@media (min-width: 768px) {
+
+@media (min-width: 769px) {
   .kids-sec9-content {
     flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .kids-sec9-text {
+    width: 50%;
+    text-align: right;
+    padding-right: 2em;
+  }
+
+  .kids-sec9-text p {
+    font-size: 1.5rem;
+    padding: 0 25%;
+  }
+  .kids-sec9 h2 {
+    font-size: 2.7rem;
+  }
+
+  .kids-sec9-images {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .kids-sec9-images img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .kids-sec9-text h2 {
+    font-size: 28px;
+  }
+  .kids-sec9-text p {
+    font-size: 22px;
   }
   .kids-sec9-images img {
     width: 100%;
-    margin: 0;
-  }
-  .kids-sec9-text {
-    max-width: 100%;
-    text-align: right;
-  }
-  .kids-sec9-text h2 {
-    font-size: 2.4rem;
-  }
-  .kids-sec9-text .kids-sec9-title {
-    font-size: 1.5rem;
-  }
-  .kids-sec9-text p {
-    font-size: 1.2rem;
-  }
-}
-@media (min-width: 1024px) {
-  .kids-sec9-content {
-    padding: 40px;
-  }
-  .kids-sec9-text h2 {
-    font-size: 2.8rem;
-  }
-  .kids-sec9-text .kids-sec9-title {
-    font-size: 1.6rem;
-  }
-  .kids-sec9-text p {
-    font-size: 1.3rem;
   }
 }
 
