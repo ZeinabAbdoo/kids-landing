@@ -13,7 +13,8 @@
         <h4>اغتنم عروض الجمعة البيضاء <span>(للأطفال)</span></h4>
         <h2>احصل على <span>ضعف المدة بنفس السعر!</span></h2>
         <p>
-            احتفالًا بمناسبة الجمعة البيضاء، نقدم لك فرصة استثنائية! سجّل الآن واحصل على 6 أشهر من التعليم الممتع، واحصل على 6 أشهر إضافية مجانًا! مع برامجنا المبتكرة، سيتحول تعلم اللغة الإنجليزية إلى تجربة مثيرة وملهمة لطفلك.
+          بمناسبة الجمعة البيضاء، سجّل الآن واحصل على 6 أشهر تعليمية + 6 أشهر
+          مجانًا!
         </p>
         <h3>لا تفوت هذه الفرصة المميزة واستمتع بعروض الجمعة البيضاء!</h3>
         <button @click="addToCart(prices[36]?.packageId)" id="pg-ar-kids">
@@ -35,7 +36,7 @@
   align-items: center;
   direction: rtl;
   background-image: url("@/assets/images/kids.png");
-   background-size: cover;
+  background-size: cover;
   background-position: center;
   font-family: "DIN Next LT Arabic", sans-serif;
   padding: 3% 0;
@@ -386,7 +387,7 @@ export default {
     };
   },
   methods: {
-        async sendMessage() {
+    async sendMessage() {
       try {
         const response = await fetch(
           `https://service.monglish.co.uk/api/get-phone-number`
